@@ -1,0 +1,21 @@
+{
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish"
+    }
+  },
+  "ignoreChanges": [
+    "**/__(fixtures|tests|specs)__/**",
+    "**/*.(md|txt)"
+  ],
+  "npmClient": "yarn",
+  "packages": [
+    "clients/*",
+    "packages/*",
+    "playgrounds/*",
+    "servers/*"
+  ],
+  "useWorkspaces": true,
+  "version": "0.0.0"
+}

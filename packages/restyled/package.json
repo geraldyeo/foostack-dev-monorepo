@@ -1,0 +1,17 @@
+{
+  "name": "@foostackdev/restyled",
+  "version": "0.0.0",
+  "description": "Restyled module",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"
+  },
+  "author": "Gerald Yeo <gerald.yeo@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=10.0.0",
+    "yarn": ">= 1.13.0"
+  }
+}
