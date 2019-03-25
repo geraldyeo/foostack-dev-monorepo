@@ -19,6 +19,8 @@
     "servers/*"
   ],
   "scripts": {
+    "build": "yarn run build:site",
+    "build:site": "lerna run build --scope @foostackdev/site",
     "lint": "concurrently -k -r yarn:lint:*",
     "lint:clients": "eslint \"clients/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
     "lint:packages": "eslint \"packages/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
@@ -71,7 +73,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.5.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "husky": "^1.3.1",
     "jest": "^24.5.0",
     "jest-circus": "^24.5.0",
@@ -83,13 +85,7 @@
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0",
-    "react-hooks-testing-library": "^0.3.7",
+    "react-hooks-testing-library": "^0.3.8",
     "react-testing-library": "^6.0.2"
-  },
-  "dependencies": {
-    "@foostackdev/core": "file:packages/core",
-    "@foostackdev/docs": "file:playgrounds/docs",
-    "@foostackdev/restyled": "file:packages/restyled",
-    "@foostackdev/site": "file:clients/foostack-dev-site"
   }
 }

@@ -31,7 +31,7 @@ module.exports = {
       plugins: ['@babel/plugin-transform-runtime', 'lodash'],
     },
     {
-      test: './packages/acorn',
+      test: './packages/restyled',
       presets: ['@babel/preset-react'],
       plugins: ['@babel/plugin-transform-runtime', 'lodash', 'babel-plugin-styled-components'],
       env: {
@@ -41,13 +41,12 @@ module.exports = {
       },
     },
     {
-      test: './clients/webapp',
-      presets: ['@babel/preset-react', '@babel/preset-flow'],
+      test: './clients/foostack-dev-site',
+      presets: ['@babel/preset-react'],
       plugins: [
         '@babel/plugin-transform-async-to-generator',
         '@babel/plugin-transform-runtime',
         'babel-plugin-styled-components',
-        ['react-intl-auto', { removePrefix: 'src/' }],
         'add-module-exports',
       ],
       env: {
@@ -57,19 +56,12 @@ module.exports = {
         production: {
           presets: [['@babel/preset-env', { useBuiltIns: 'entry' }]],
           plugins: [
-            '@babel/plugin-transform-flow-strip-types',
             '@babel/plugin-transform-react-inline-elements',
             [
               'transform-imports',
               { lodash: { transform: 'lodash/${member}', preventFullImport: true } },
             ],
             'lodash',
-          ],
-        },
-        intl: {
-          plugins: [
-            'flow-react-proptypes',
-            ['react-intl', { messagesDir: './src/messages', enforceDescriptions: false }],
           ],
         },
         test: {

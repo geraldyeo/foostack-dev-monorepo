@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'airbnb',
     'react-app',
     'plugin:react/recommended',
     'plugin:jest/recommended',
@@ -9,15 +8,10 @@ module.exports = {
     'prettier',
     'prettier/react',
   ],
-  plugins: ['jsx-a11y', 'prettier', 'jest'],
+  plugins: ['prettier', 'jest'],
   rules: {
-    // general
-    'no-unused-vars': 'warn',
-    'no-var': 'error',
     // react
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
     // prettier
     'prettier/prettier': [
       'warn',
