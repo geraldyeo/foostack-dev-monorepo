@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "clients/foostack-dev-site/package.json",
+        "package.json",
+        "packages/core/package.json",
+        "packages/restyled/package.json",
+        "playgrounds/docs/package.json"
+      ]
+    }
+  }
+}
