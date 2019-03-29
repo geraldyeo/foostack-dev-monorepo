@@ -1,10 +1,10 @@
 module.exports = {
   extends: [
-    'eslint:recommended',
     'react-app',
+    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jest/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:jest/recommended',
     'prettier',
     'prettier/react',
   ],
