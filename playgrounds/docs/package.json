@@ -1,7 +1,7 @@
 {
-  "name": "@foostackdev/docs",
+  "name": "@foostackdev/storybook",
   "version": "0.0.0",
-  "description": "Playground - Docs",
+  "description": "Playground - Storybook",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

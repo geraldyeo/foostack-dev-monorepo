@@ -123,3 +123,8 @@ public
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# foostack
+build
+dist
+lib

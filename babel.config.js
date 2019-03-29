@@ -28,12 +28,12 @@ module.exports = {
   overrides: [
     {
       test: './packages/core',
-      plugins: ['@babel/plugin-transform-runtime', 'lodash'],
+      presets: ['@babel/preset-env', '@babel/typescript'],
     },
     {
       test: './packages/restyled',
       presets: ['@babel/preset-react'],
-      plugins: ['@babel/plugin-transform-runtime', 'lodash', 'babel-plugin-styled-components'],
+      plugins: ['@babel/plugin-transform-runtime', 'lodash', 'babel-plugin-emotion'],
       env: {
         production: {
           plugins: ['transform-react-remove-prop-types'],
@@ -46,7 +46,7 @@ module.exports = {
       plugins: [
         '@babel/plugin-transform-async-to-generator',
         '@babel/plugin-transform-runtime',
-        'babel-plugin-styled-components',
+        'babel-plugin-emotion',
         'add-module-exports',
       ],
       env: {
@@ -54,7 +54,6 @@ module.exports = {
           plugins: ['flow-react-proptypes'],
         },
         production: {
-          presets: [['@babel/preset-env', { useBuiltIns: 'entry' }]],
           plugins: [
             '@babel/plugin-transform-react-inline-elements',
             [

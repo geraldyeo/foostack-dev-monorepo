@@ -15,28 +15,28 @@
     "yarn": ">= 1.13.0"
   },
   "scripts": {
+    "prebuild": "gatsby clean",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "yarn run develop",
-    "serve": "gatsby serve"
+    "start": "yarn run build && gatsby serve"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
     "dotenv": "^7.0.0",
-    "gatsby": "^2.2.9",
-    "gatsby-image": "^2.0.34",
+    "gatsby": "^2.3.4",
+    "gatsby-image": "^2.0.35",
     "gatsby-plugin-emotion": "^4.0.6",
-    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-manifest": "^2.0.26",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.11",
-    "gatsby-plugin-sharp": "^2.0.31",
-    "gatsby-source-contentful": "^2.0.42",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-source-contentful": "^2.0.45",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-sharp": "^2.1.17",
     "prop-types": "^15.7.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0"
   }
 }
