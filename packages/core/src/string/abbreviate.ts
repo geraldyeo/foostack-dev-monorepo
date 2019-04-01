@@ -1,7 +1,8 @@
 import toString from './safe-string';
 
 const abbreviate = (str?: string): string => {
-  const matched: Array<string> = toString(str).match(/\b([A-Z])/g) || [];
+  const _str = toString(str);
+  const matched: Array<string> = _str.match(/\b([A-Z])/g) || [_str];
   return matched.join('');
 };
 

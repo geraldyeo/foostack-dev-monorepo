@@ -28,6 +28,8 @@ module.exports = {
   // The path to a module that runs some code to configure or set up the testing framework before each test
   setupFilesAfterEnv: ['<rootDir>/jest/setup.js'],
 
+  testPathIgnorePatterns: ['/node_modules/', '/.cache/'],
+
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: ['/node_modules/', '/cytests/'],
 
@@ -39,7 +41,7 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.jsx?$': '<rootDir>/jest/wrapper.js',
+    '^.+\\.(js|ts)x?$': '<rootDir>/jest/wrapper.js',
   },
 
   // Indicates whether each individual test should be reported during the run
