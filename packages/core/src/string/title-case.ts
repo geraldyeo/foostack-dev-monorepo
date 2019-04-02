@@ -1,19 +1,12 @@
 import toString from './safe-string';
 
-const urlPattern: RegExp = /https?:\/\/(www\.)?/i;
-const wordSeparators: RegExp = /([ :–—-])/;
-
 // Title case a string
 const titleCase = (str: string, { except = [] } = {}): string => {
   const alphaNumeric: RegExp = /([A-Za-z0-9\u00C0-\u00FF])/;
   const smallWords: RegExp = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|v.?|vs.?|via)$/i;
+  const wordSeparators: RegExp = /([ :–—-])/;
 
-  const _str = toString(str);
-  if (_str.search(urlPattern) > -1) {
-    return _str;
-  }
-
-  return _str
+  return toString(str)
     .split(wordSeparators)
     .map(
       (curr: string, index: number, array: Array<string>): string => {
@@ -31,20 +24,21 @@ const titleCase = (str: string, { except = [] } = {}): string => {
         ) {
           return curr.toLowerCase();
         }
-
         // Ignore exceptions
         if (
           except.length &&
-          curr.search(new RegExp(`^(${except.filter(v => !!v).join('|')})[-!,.?]*?$`, 'i')) > -1
+          curr.search(new RegExp(`^(${except.filter(Boolean).join('|')})[-!,.?]*?$`, 'i')) > -1
         ) {
           return curr;
         }
-
         // Ignore intentional capitalization
         if (curr.substr(1).search(/[A-Z]|\../) > -1) {
           return curr;
         }
-
+        // Ignore URLs
+        if (array[index + 1] === ':' && array[index + 2] !== '') {
+          return curr;
+        }
         // Capitalize the first letter
         return curr.replace(alphaNumeric, match => match.toUpperCase());
       },

@@ -1,15 +1,16 @@
 import toString from '../safe-string';
 
 describe('safe-string', () => {
-  it('should return empty string', () => {
-    const expected = '';
-    const value = toString();
-    expect(value).toBe(expected);
+  it('should work with empty strings, null and undefined', () => {
+    expect(toString('')).toBe('');
+    expect(toString()).toBe('');
+    expect(toString(null)).toBe('');
+    expect(toString(undefined)).toBe('');
   });
 
-  it('should return the string as is', () => {
+  it('should return the string verbatim', () => {
     const expected = 'verbatim';
     const value = toString('verbatim');
-    expect(value).toBe(expected);
+    expect(value).toEqual(expected);
   });
 });
