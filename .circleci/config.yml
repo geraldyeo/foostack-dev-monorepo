@@ -16,7 +16,6 @@ _run:
 jobs:
   build:
     <<: *defaults
-
     steps:
       - checkout
       - restore_cache:
@@ -36,19 +35,46 @@ jobs:
 
   test:
     <<: *defaults
-
     steps:
       - checkout
       - attach_workspace:
           at: *working_directory
-      - run: yarn test
+      - run: yarn run test:coverage
+      - persist_to_workspace:
+          root: *working_directory
+          paths:
+            - node_modules
+            - coverage
+
+  codacy-coverage:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: *working_directory
+      - run: yarn run test:codacy-coverage
 
 workflows:
   version: 2
   build-test:
     jobs:
-      - build:
+      - build: # job runs for all branches and all tags.
           context: Contentful
-      - test:
+          filters:
+            tags:
+              only: /.*/
+      - test: # job runs for all branches and all tags.
           requires:
             - build
+          filters:
+            tags:
+              only: /.*/
+      - codacy-coverage: # job runs for no branches and only for tags starting with ‘v’.
+          context: Codacy
+          requires:
+            - test
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/

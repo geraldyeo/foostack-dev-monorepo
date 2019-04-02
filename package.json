@@ -26,7 +26,9 @@
     "lint": "concurrently -k -r yarn:lint:*",
     "lint:clients": "eslint \"clients/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
     "lint:packages": "eslint \"packages/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
-    "test": "cross-env NODE_ENV=test jest --passWithNoTests"
+    "test": "cross-env NODE_ENV=test jest --passWithNoTests",
+    "test:coverage": "yarn run test --coverage",
+    "test:codacy-coverage": "cat ./coverage/lcov.info | codacy-coverage"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -64,6 +66,7 @@
     "babel-plugin-macros": "^2.5.1",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "codacy-coverage": "^3.4.0",
     "concurrently": "^4.1.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.15.3",
