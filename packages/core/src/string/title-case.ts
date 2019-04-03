@@ -9,7 +9,7 @@ const titleCase = (str: string, { except = [] } = {}): string => {
   return toString(str)
     .split(wordSeparators)
     .map(
-      (curr: string, index: number, array: Array<string>): string => {
+      (curr: string, index: number, array: string[]): string => {
         if (
           /* Check for small words */
           curr.search(smallWords) > -1 &&

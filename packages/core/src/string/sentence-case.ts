@@ -7,7 +7,7 @@ const sentenceCase = (str?: string, { except = [] } = {}): string => {
   return (
     toString(str)
       .split(wordSeparators)
-      .map((curr, index, array) => {
+      .map((curr: string, index: number, array: string[]) => {
         /* Ignore exceptions */
         if (
           except.length &&

@@ -20,5 +20,9 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel --root-mode upward src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "develop": "tsc --noEmit --watch"
+  },
+  "dependencies": {
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2"
   }
 }
