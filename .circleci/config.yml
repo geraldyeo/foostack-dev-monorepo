@@ -59,18 +59,19 @@ workflows:
   build-test:
     jobs:
       - build: # job runs for all branches and all tags.
-          context: Contentful
+          context: dev-foostack
           filters:
             tags:
               only: /.*/
       - test: # job runs for all branches and all tags.
+          context: dev-foostack
           requires:
             - build
           filters:
             tags:
               only: /.*/
       - codacy-coverage: # job runs for no branches and only for tags starting with ‘v’.
-          context: Codacy
+          context: dev-foostack
           requires:
             - test
           filters:
