@@ -5,6 +5,6 @@ import toString from './safe-string';
  * Matches non-printable ASCII chars -
  * http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters
  */
-const removeNonASCII = (str?: string): string => toString(str).replace(/[^\x20-\x7E]/g, '');
+export const removeNonASCII = (str?: string): string => toString(str).replace(/[^\x20-\x7E]/g, '');
 
 export default removeNonASCII;

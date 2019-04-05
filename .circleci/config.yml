@@ -11,7 +11,8 @@ _defaults: &defaults
 
 _run:
   node: &node
-    command: yarn install
+    name: Install Dependencies
+    command: yarn install --frozen-lockfile
 
 jobs:
   build:
@@ -20,13 +21,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - ci-dependencies-{{ checksum "package.json" }}
-            - ci-dependencies-
+            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages-
       - run: *node
       - save_cache:
-          key: ci-dependencies-{{ checksum "package.json" }}
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
+            - ~/.cache/yarn
       - run: yarn run build
       - persist_to_workspace:
           root: *working_directory

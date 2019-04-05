@@ -1,7 +1,7 @@
 import toString from './safe-string';
 
 // Sentence case a string
-const sentenceCase = (str?: string, { except = [] } = {}): string => {
+export const sentenceCase = (str?: string, { except = [] } = {}): string => {
   const wordSeparators: RegExp = /([ :–—-])/;
 
   return (

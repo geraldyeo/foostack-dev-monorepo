@@ -1,7 +1,7 @@
 import toString from './safe-string';
 
 // Replaces all accented chars with regular ones
-const replaceAccents = (str?: string): string => {
+export const replaceAccents = (str?: string): string => {
   let _str: string = toString(str);
   if (_str.search(/[\xC0-\xFF]/g) > -1) {
     _str = _str

@@ -1,7 +1,7 @@
 import toString from './safe-string';
 
 // Unescapes HTML special chars
-const unescapeHtml = (str?: string): string =>
+export const unescapeHtml = (str?: string): string =>
   toString(str)
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')

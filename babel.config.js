@@ -24,6 +24,8 @@ module.exports = {
     '@babel/plugin-syntax-import-meta',
     ['@babel/plugin-proposal-class-properties', { loose: false }],
     '@babel/plugin-proposal-json-strings',
+    //
+    'babel-plugin-dev-expression',
   ],
   overrides: [
     {
