@@ -1,5 +1,5 @@
 import get from 'lodash.get';
-import set from 'lodash.set';
+import invariant from 'invariant';
 
 /* ========================================
  * utils
@@ -21,14 +21,19 @@ export const toPx = (value: any, { base = 16 }: Args = {}): string =>
   `${parseFloat(value) * base}px`;
 
 export const parseUnit = (str: string): string => {
-  const matched: string[] | null = str.trim().match(/[\d.\-+]*\s*(.*)/);
-  return matched ? matched[1] : '';
+  const matched: any = str.trim().match(/[\d.\-+]*\s*(.*)/);
+  return matched && matched[1];
 };
 
 export const themed = (
   key: string,
   { defaultValue: df, transformValue: tx = v => v }: themedArgs = {},
-) => ({ theme }: { theme: object }) => tx(get(theme, key, df));
+) => ({ theme }: { theme?: DesignSystem<{}> } = {}) => {
+  if (theme && theme.get) {
+    return tx(theme.get(key, df));
+  }
+  return df;
+};
 
 /* ========================================
  * Design System
@@ -66,22 +71,31 @@ interface DesignTokens {
 }
 
 class DesignSystem<T extends DesignTokens> {
-  private ds: T;
+  private _ds: T;
 
   constructor(token: T) {
-    this.ds = token;
+    invariant(token, 'A design token is needed.');
+    this._ds = token;
   }
 
-  public get(key: string): any {
-    return get(this.ds, key);
+  public get(key: string, defaultValue?: any): any {
+    const value = get(this._ds, key, defaultValue);
+    invariant(value, `Parent key (${key}) not found in token.`);
+    return value;
   }
 
-  public getColor(key: string): any {
-    const hasPath = /[.\[\]]/;
-    if (hasPath.test(key)) {
-      return get(this.colors, key);
+  public getColor(key: string, variant: string = 'base'): any {
+    const pathSeparator = /[.\[\]]/;
+    const hasVariant = new RegExp(variant, 'i');
+    if (pathSeparator.test(key)) {
+      if (hasVariant.test(key)) {
+        return get(this.colors, key);
+      }
+      let newKey: any = key.split(pathSeparator).filter(s => s !== '');
+      newKey.splice(1, 0, variant);
+      return get(this.colors, newKey);
     }
-    return get(this.colors, `${key}.base`);
+    return get(this.colors, [key, variant]);
   }
 
   public get breakpoints(): string[] {
@@ -110,6 +124,10 @@ class DesignSystem<T extends DesignTokens> {
 
   public get space(): number[] {
     return this.get('space');
+  }
+
+  public toJSON(): T {
+    return this._ds;
   }
 }
 

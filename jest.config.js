@@ -21,8 +21,6 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/jest/__mocks__/fileMock.js',
     '\\.(css|scss)$': '<rootDir>/jest/__mocks__/styleMock.js',
-    '@foostackdev/restyled': '<rootDir>/packages/restyled/src/index.js',
-    '@foostackdev/core': '<rootDir>/packages/core/src/index.js',
   },
 
   // The path to a module that runs some code to configure or set up the testing framework before each test
