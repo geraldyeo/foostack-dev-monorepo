@@ -2,8 +2,8 @@ import { css } from '@emotion/core';
 
 const rendering = css`
   html {
-    /* Adjust font size */
-    font-size: 100%;
+    /* Adjust font size 1em = 10px on default browser settings */
+    font-size: 62.5%;
     text-size-adjust: 100%;
     /* Font variant */
     font-variant-ligatures: none;
@@ -12,6 +12,9 @@ const rendering = css`
     font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+  }
+  body {
+    font-size: 1.6rem;
   }
 `;
 

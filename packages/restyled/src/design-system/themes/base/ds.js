@@ -2,11 +2,11 @@ import DesignSystem from '@foostackdev/core';
 import { generateMedia } from 'styled-media-query';
 
 const breakpoints = {
-  /* tiny: '40em', //  reference only: 640px (max-width) - phones */
-  small: '40em', // 640px (min-width) - tablets portrait
-  medium: '58em', // 928px (min-width) - tablets landscape
-  large: '75em', // 1200px (min-width) - desktops
-  huge: '112em', // 1792px (min-width) - desktops ultra-wide
+  // reference only: 600px - mobile down (max-width)
+  small: '600px', // - tablet portrait up (min-width)
+  medium: '900px', // - tablet landscape up (min-width)
+  large: '1200px', // - desktop up (min-width)
+  huge: '1800px', // - desktop ultra-wide up (min-width)
 };
 
 /**
