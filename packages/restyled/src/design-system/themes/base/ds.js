@@ -2,11 +2,11 @@ import DesignSystem from '@foostackdev/core';
 import { generateMedia } from 'styled-media-query';
 
 const breakpoints = {
-  /* tiny: '40em', //  reference only: 640px (max-width) - phones */
-  small: '40em', // 640px (min-width) - tablets portrait
-  medium: '58em', // 928px (min-width) - tablets landscape
-  large: '75em', // 1200px (min-width) - desktops
-  huge: '112em', // 1792px (min-width) - desktops ultra-wide
+  // reference only: 600px - mobile down (max-width)
+  small: '600px', // - tablet portrait up (min-width)
+  medium: '900px', // - tablet landscape up (min-width)
+  large: '1200px', // - desktop up (min-width)
+  huge: '1800px', // - desktop ultra-wide up (min-width)
 };
 
 /**
@@ -45,9 +45,15 @@ const { between, greaterThan, lessThan } = generateMedia(breakpoints);
 
 const token = {
   breakpoints: Object.values(breakpoints),
+  colors: {
+    accents: { light: ['#049DBF', '#F2B705', '#F29F05', '#F27405', '#D93D04'] },
+    neutrals: { light: ['#F2F2F2', '#D9D9D9', '#A6A6A6', '#595959', '#262626'] },
+  },
   fonts: {
-    system: 'system-ui, system-fonts, sans-serif',
+    system:
+      'system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     roboto: 'Roboto, sans-serif',
+    robotoMono: '"Roboto Mono", monospace, serif',
     robotoSlab: '"Roboto Slab", serif',
   },
   fontSizes: [12, 14, 16, 18, 24, 32, 36, 48, 64, 72, 96],
@@ -63,4 +69,6 @@ const token = {
   space: [0, 8, 16, 24, 32, 64, 128, 256, 512],
 };
 
-export default new DesignSystem(token);
+export const dark = new DesignSystem(token, 'dark');
+export const light = new DesignSystem(token, 'light');
+export default { light, dark };
