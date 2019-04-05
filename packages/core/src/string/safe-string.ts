@@ -1,3 +1,3 @@
-const toString = (str?: string): string => (!str ? '' : str);
+export const safeString = (str?: string): string => (!str ? '' : str);
 
-export default toString;
+export default safeString;
