@@ -19,6 +19,9 @@
     "servers/*"
   ],
   "scripts": {
+    "prerelease": "yarn run build",
+    "release": "cross-env HUSKY_BYPASS=true lerna publish",
+    "release:dryrun": "yarn run release --no-git-tag-version --no-push",
     "build": "yarn run build:packages && yarn run build:clients",
     "build:packages": "lerna run build --parallel --scope '@foostackdev/{core,restyled}'",
     "build:clients": "lerna run build --parallel --scope '@foostackdev/site'",
