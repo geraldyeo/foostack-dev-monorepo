@@ -1,5 +1,5 @@
 {
-  "name": "@foostackdev/core",
+  "name": "@foostack-dev/core",
   "version": "0.0.0",
   "description": "Core module",
   "main": "lib/index.js",
@@ -19,10 +19,13 @@
     "build": "yarn run build:types && yarn run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel --root-mode upward src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "develop": "tsc --noEmit --watch"
+    "develop": "yarn run develop:js",
+    "develop:types": "tsc --noEmit --watch",
+    "develop:js": "yarn run build --watch"
   },
   "dependencies": {
     "invariant": "^2.2.4",
-    "lodash.get": "^4.4.2"
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2"
   }
 }

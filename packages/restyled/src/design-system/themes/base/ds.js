@@ -1,5 +1,7 @@
-import DesignSystem from '@foostackdev/core';
-import { generateMedia } from 'styled-media-query';
+import { DesignSystem, generateMediaQuery } from '@foostack-dev/core';
+import { css } from 'styled-components';
+import { getDarkenedColor, getLightenedColor } from '../../../utils/colors';
+import * as styledVariants from './variants';
 
 const breakpoints = {
   // reference only: 600px - mobile down (max-width)
@@ -41,12 +43,20 @@ const breakpoints = {
  * greaterThan('large')`...css` // target desktops and up
  * greaterThan('huge')`...css` // target ultra-wide desktop monitors
  */
-const { between, greaterThan, lessThan } = generateMedia(breakpoints);
+const { between, greaterThan, lessThan } = generateMediaQuery(breakpoints, (...args) =>
+  css(...args),
+);
 
 const token = {
   breakpoints: Object.values(breakpoints),
   colors: {
     accents: { light: ['#049DBF', '#F2B705', '#F29F05', '#F27405', '#D93D04'] },
+    accentsLightened: {
+      light: ['#049DBF', '#F2B705', '#F29F05', '#F27405', '#D93D04'].map(getLightenedColor),
+    },
+    accentsDarkened: {
+      light: ['#049DBF', '#F2B705', '#F29F05', '#F27405', '#D93D04'].map(getDarkenedColor),
+    },
     neutrals: { light: ['#F2F2F2', '#D9D9D9', '#A6A6A6', '#595959', '#262626'] },
   },
   fonts: {
@@ -67,8 +77,9 @@ const token = {
   media: { between, greaterThan, lessThan },
   radii: [0, 2, 4, 6],
   space: [0, 8, 16, 24, 32, 64, 128, 256, 512],
+  styledVariants,
 };
 
-export const dark = new DesignSystem(token, 'dark');
-export const light = new DesignSystem(token, 'light');
-export default { light, dark };
+export const baseTheme = new DesignSystem(token, 'light');
+
+export default baseTheme;

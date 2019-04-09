@@ -35,7 +35,7 @@ module.exports = {
     {
       test: './packages/restyled',
       presets: ['@babel/preset-react'],
-      plugins: ['@babel/plugin-transform-runtime', 'lodash', 'babel-plugin-emotion'],
+      plugins: ['@babel/plugin-transform-runtime', 'lodash', 'babel-plugin-styled-components'],
       env: {
         production: {
           plugins: ['transform-react-remove-prop-types'],
@@ -48,7 +48,7 @@ module.exports = {
       plugins: [
         '@babel/plugin-transform-async-to-generator',
         '@babel/plugin-transform-runtime',
-        'babel-plugin-emotion',
+        'babel-plugin-styled-components',
         'add-module-exports',
       ],
       env: {

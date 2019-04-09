@@ -1,5 +1,5 @@
 {
-  "name": "@foostackdev/storybook",
+  "name": "@foostack-dev/storybook",
   "version": "0.0.0",
   "description": "Playground - Storybook",
   "main": "lib/index.js",
@@ -13,5 +13,26 @@
   "engines": {
     "node": ">=10.0.0",
     "yarn": ">= 1.13.0"
+  },
+  "scripts": {
+    "develop": "yarn run develop:restyled",
+    "develop:restyled": "start-storybook -p 9091 -c .storybook-restyled",
+    "build": "yarn run build:restyled",
+    "build:restyled": "build-storybook -c .storybook-restyled -o .out-restyled"
+  },
+  "dependencies": {
+    "@foostack-dev/restyled": "^0.0.0",
+    "@storybook/addon-actions": "^5.0.7",
+    "@storybook/addon-backgrounds": "^5.0.7",
+    "@storybook/addon-info": "^5.0.7",
+    "@storybook/addon-knobs": "^5.0.7",
+    "@storybook/addon-links": "^5.0.7",
+    "@storybook/addon-notes": "^5.0.7",
+    "@storybook/addon-viewport": "^5.0.7",
+    "@storybook/react": "^5.0.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "storybook-addon-smart-knobs": "^4.1.2",
+    "storybook-react-router": "^1.0.5"
   }
 }
