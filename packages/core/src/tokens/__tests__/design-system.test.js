@@ -45,7 +45,7 @@ describe('DesignSystem', () => {
     });
 
     it('should return the design system token', () => {
-      expect(ds.toJSON()).toEqual(token);
+      expect(ds.toJSON()).toEqual({ ...token, variant: 'base' });
     });
 
     it('should get breakpoints property', () => {

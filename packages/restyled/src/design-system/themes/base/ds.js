@@ -1,5 +1,6 @@
-import DesignSystem from '@foostackdev/core';
-import { generateMedia } from 'styled-media-query';
+import { DesignSystem, generateMediaQuery } from '@foostackdev/core';
+import { css } from 'styled-components';
+import * as styledVariants from './variants';
 
 const breakpoints = {
   // reference only: 600px - mobile down (max-width)
@@ -41,7 +42,9 @@ const breakpoints = {
  * greaterThan('large')`...css` // target desktops and up
  * greaterThan('huge')`...css` // target ultra-wide desktop monitors
  */
-const { between, greaterThan, lessThan } = generateMedia(breakpoints);
+const { between, greaterThan, lessThan } = generateMediaQuery(breakpoints, (...args) =>
+  css(...args),
+);
 
 const token = {
   breakpoints: Object.values(breakpoints),
@@ -67,8 +70,9 @@ const token = {
   media: { between, greaterThan, lessThan },
   radii: [0, 2, 4, 6],
   space: [0, 8, 16, 24, 32, 64, 128, 256, 512],
+  styledVariants,
 };
 
-export const dark = new DesignSystem(token, 'dark');
-export const light = new DesignSystem(token, 'light');
-export default { light, dark };
+export const baseTheme = new DesignSystem(token, 'light');
+
+export default baseTheme;

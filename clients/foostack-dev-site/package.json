@@ -21,12 +21,9 @@
     "start": "yarn run build && gatsby serve"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.10",
     "dotenv": "^7.0.0",
     "gatsby": "^2.3.15",
     "gatsby-image": "^2.0.37",
-    "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-manifest": "^2.0.27",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
