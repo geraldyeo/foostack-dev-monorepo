@@ -1,5 +1,6 @@
 import DesignSystem from '@foostackdev/core';
 import { generateMedia } from 'styled-media-query';
+import * as styledVariants from './variants';
 
 const breakpoints = {
   // reference only: 600px - mobile down (max-width)
@@ -67,8 +68,9 @@ const token = {
   media: { between, greaterThan, lessThan },
   radii: [0, 2, 4, 6],
   space: [0, 8, 16, 24, 32, 64, 128, 256, 512],
+  styledVariants,
 };
 
-export const dark = new DesignSystem(token, 'dark');
-export const light = new DesignSystem(token, 'light');
-export default { light, dark };
+export const baseTheme = new DesignSystem(token, 'light');
+
+export default baseTheme;

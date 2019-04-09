@@ -6711,6 +6711,13 @@ eslint-plugin-flowtype@^2.46.1:
   dependencies:
     lodash "^4.17.10"
 
+eslint-plugin-flowtype@^3.6.0:
+  version "3.6.0"
+  resolved "https://npm-registry.production.stashaway.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.6.0.tgz#375a3d77f5dbd3a0d2c3554fadcd1d0735a6eb2e"
+  integrity sha512-7wRfgzXteB9jswXreGG64FlOdscV4z4hIW2lS+mC5t1K2QQkUDh7A+95dB4nU7io8zIOq4cRpftF+41xvMCtiA==
+  dependencies:
+    lodash "^4.17.11"
+
 eslint-plugin-graphql@^2.0.0:
   version "2.1.1"
   resolved "https://npm-registry.production.stashaway.com/eslint-plugin-graphql/-/eslint-plugin-graphql-2.1.1.tgz#dae5d597080075320ea8e98795056309ffe73a18"
@@ -15280,6 +15287,11 @@ styled-system@^4.1.0:
   dependencies:
     "@babel/runtime" "^7.4.2"
     prop-types "^15.7.2"
+
+styled-theming@^2.2.0:
+  version "2.2.0"
+  resolved "https://npm-registry.production.stashaway.com/styled-theming/-/styled-theming-2.2.0.tgz#3084e43d40eaab4bc11ebafd3de04e3622fee37e"
+  integrity sha1-MITkPUDqq0vBHrr9PeBONiL+434=
 
 stylehacks@^4.0.0:
   version "4.0.3"

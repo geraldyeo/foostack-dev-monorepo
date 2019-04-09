@@ -41,6 +41,7 @@
     "styled-map": "^3.2.0-rc.1",
     "styled-media-query": "^2.1.1",
     "styled-system": "^4.1.0",
+    "styled-theming": "^2.2.0",
     "typography": "^0.16.19"
   }
 }
