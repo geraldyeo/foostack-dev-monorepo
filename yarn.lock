@@ -1456,21 +1456,7 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.4.2":
-  version "7.4.2"
-  resolved "https://npm-registry.production.stashaway.com/@babel%2fruntime/-/runtime-7.4.2.tgz#f5ab6897320f16decd855eed70b705908a313fe8"
-  integrity sha512-7Bl2rALb7HpvXFL7TETNzKSAeBVCPHELzc0C//9FCxN8nsiueWSJBqaF+2oIJScyILStASR/Cx5WMkXGYTiJFA==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4":
-  version "7.3.4"
-  resolved "https://npm-registry.production.stashaway.com/@babel%2fruntime/-/runtime-7.3.4.tgz#73d12ba819e365fcf7fd152aed56d6df97d21c83"
-  integrity sha512-IvfvnMdSaLBateu0jfsYIpZTxAc2cKEXEMiezGGN75QcBcecDUKd3PgLAncT0oOgxKy8dd8hrJKj9MfzgfZd6g==
-  dependencies:
-    regenerator-runtime "^0.12.0"
-
-"@babel/runtime@^7.2.0", "@babel/runtime@^7.4.3":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
   version "7.4.3"
   resolved "https://npm-registry.production.stashaway.com/@babel%2fruntime/-/runtime-7.4.3.tgz#79888e452034223ad9609187a0ad1fe0d2ad4bdc"
   integrity sha512-9lsJwJLxDh/T3Q3SZszfWOTkk3pHbkmH+3KY+zwIDmsNlxsumuhS2TH3NIpktU4kNvfzy+k3eLT7aTJSPTo0OA==
@@ -5184,15 +5170,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.3.5:
+bluebird@^3.3.5, bluebird@^3.5.0, bluebird@^3.5.1, bluebird@^3.5.3, bluebird@^3.5.x:
   version "3.5.4"
   resolved "https://npm-registry.production.stashaway.com/bluebird/-/bluebird-3.5.4.tgz#d6cc661595de30d5b3af5fcedd3c0b3ef6ec5714"
   integrity sha512-FG+nFEZChJrbQ9tIccIfZJBz3J7mLrAhxakAbnrJWn8d7aKOC+LWifa0G+p4ZqKp4y13T7juYvdhq9NzKdsrjw==
-
-bluebird@^3.5.0, bluebird@^3.5.1, bluebird@^3.5.3, bluebird@^3.5.x:
-  version "3.5.3"
-  resolved "https://npm-registry.production.stashaway.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
-  integrity sha512-/qKPUQlaW1OyR51WeCPBvRnAlnZFUJkCSG5HzGnuIqhgyJtF+T94lFnn33eiazjRm2LAHVy2guNnaq48X9SJuw==
 
 bmp-js@0.0.3:
   version "0.0.3"
@@ -9273,10 +9254,10 @@ gatsby-plugin-react-helmet@^3.0.12:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sharp@^2.0.32:
-  version "2.0.32"
-  resolved "https://npm-registry.production.stashaway.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.32.tgz#47ebf2e44ece58560fa8bc604e7904ff9dca1386"
-  integrity sha512-5cLD2VUcKBtIm7QJbSj4fIAv/eqD6KhraHODHjpGwqvwSOdLQB7YcmzSCPnRwxEv+0f2wNrjZYpsd8SmIWfhDw==
+gatsby-plugin-sharp@^2.0.32, gatsby-plugin-sharp@^2.0.34:
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.34.tgz#c08159d00d3f3aec23bbe16fca240deffa6cdeb9"
+  integrity sha512-P15HULFZ5TwmAww1TNxSaHrGr+twZBK+VgTM4XBDEazfgbUTDsTRuxEgoS7DqNZg5jlg9W7L+wQ0Nr45jMqiBA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -9304,9 +9285,9 @@ gatsby-react-router-scroll@^2.0.7:
     warning "^3.0.0"
 
 gatsby-source-contentful@^2.0.46:
-  version "2.0.46"
-  resolved "https://npm-registry.production.stashaway.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.46.tgz#e834c0bf12df014f98fafc2c4ef34b8dd584312b"
-  integrity sha512-doXgqFgh/Ywkt9iVHDmNBGmRbGYZrsSutIcm2V2PofYxFqhUHqTpxyUuroDioQmFzWkdhLQzBSLfrHSiTAe1qg==
+  version "2.0.48"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.48.tgz#acd30896359833f385082926560bbdf21f0ffe83"
+  integrity sha512-CDs/TSYpQl6vsIwEcWzgtklnwAwgpXhhp1cjF4h0k4paLa9GnQv5mWkt+VWx5FYNDPTIQYhJafWQRg17wk5Gkw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -9315,7 +9296,7 @@ gatsby-source-contentful@^2.0.46:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.0.32"
+    gatsby-plugin-sharp "^2.0.34"
     gatsby-source-filesystem "^2.0.29"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
