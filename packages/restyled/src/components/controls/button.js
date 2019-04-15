@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { themed } from '@foostackdev/core';
+import { themed } from '@foostack-dev/core';
 import { borderColor, borderRadius, borders, buttonStyle, fontWeight } from 'styled-system';
 import { Box } from '../core/box';
 

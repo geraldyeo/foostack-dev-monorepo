@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 import { variants } from 'styled-theming';
-import { themed } from '@foostackdev/core';
+import { themed } from '@foostack-dev/core';
 
 const cssBackgroundColor = variants('variant', 'variation', {
   default: {

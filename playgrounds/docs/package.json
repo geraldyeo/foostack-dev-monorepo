@@ -1,5 +1,5 @@
 {
-  "name": "@foostackdev/storybook",
+  "name": "@foostack-dev/storybook",
   "version": "0.0.0",
   "description": "Playground - Storybook",
   "main": "lib/index.js",
@@ -19,7 +19,7 @@
     "build:storybook:restyled": "build-storybook -c .storybook-restyled -o .out-restyled"
   },
   "dependencies": {
-    "@foostackdev/restyled": "^0.0.0",
+    "@foostack-dev/restyled": "^0.0.0",
     "@storybook/addon-actions": "^5.0.7",
     "@storybook/addon-backgrounds": "^5.0.7",
     "@storybook/addon-info": "^5.0.7",

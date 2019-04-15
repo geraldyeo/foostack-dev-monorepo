@@ -1,5 +1,5 @@
 {
-  "name": "@foostackdev/monorepo",
+  "name": "@foostack-dev/monorepo",
   "description": "foostack.dev monorepo",
   "repository": {
     "type": "git",
@@ -23,9 +23,9 @@
     "release": "cross-env HUSKY_BYPASS=true lerna publish",
     "release:dryrun": "yarn run release --no-git-tag-version --no-push",
     "build": "yarn run build:packages && yarn run build:clients",
-    "build:packages": "lerna run build --parallel --scope '@foostackdev/{core,restyled}'",
-    "build:clients": "lerna run build --parallel --scope '@foostackdev/site'",
-    "build:playgrounds": "lerna run build --parallel --scope '@foostackdev/storybook'",
+    "build:packages": "lerna run build --parallel --scope '@foostack-dev/{core,restyled}'",
+    "build:clients": "lerna run build --parallel --scope '@foostack-dev/site'",
+    "build:playgrounds": "lerna run build --parallel --scope '@foostack-dev/storybook'",
     "lint": "concurrently -k -r yarn:lint:*",
     "lint:clients": "eslint \"clients/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
     "lint:packages": "eslint \"packages/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",

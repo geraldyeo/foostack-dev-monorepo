@@ -1,5 +1,5 @@
 {
-  "name": "@foostackdev/core",
+  "name": "@foostack-dev/core",
   "version": "0.0.0",
   "description": "Core module",
   "main": "lib/index.js",

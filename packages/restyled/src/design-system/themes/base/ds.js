@@ -1,4 +1,4 @@
-import { DesignSystem, generateMediaQuery } from '@foostackdev/core';
+import { DesignSystem, generateMediaQuery } from '@foostack-dev/core';
 import { css } from 'styled-components';
 import * as styledVariants from './variants';
 

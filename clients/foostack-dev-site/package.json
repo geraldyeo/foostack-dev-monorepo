@@ -1,5 +1,5 @@
 {
-  "name": "@foostackdev/site",
+  "name": "@foostack-dev/site",
   "version": "0.0.0",
   "description": "Client - foostack.dev gatsby site",
   "main": "index.js",

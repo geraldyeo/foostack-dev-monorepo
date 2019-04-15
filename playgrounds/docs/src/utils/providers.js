@@ -1,5 +1,5 @@
 import React from 'react';
-import { Provider } from '@foostackdev/restyled';
+import { Provider } from '@foostack-dev/restyled';
 
 const providerDecorator = storyFunc => (
   <Provider>
