@@ -13,18 +13,18 @@ import {
   width,
 } from 'styled-system';
 
-export const Box = styled('div')(
-  {
-    boxSizing: 'border-box',
-  },
-  space,
-  width,
-  fontSize,
-  color,
-  flex,
-  order,
-  alignSelf,
-);
+export const Box = styled.div`
+  box-sizing: border-box;
+  ${space}
+  ${width}
+  ${fontSize}
+  ${color}
+  ${flex}
+  ${order}
+  ${alignSelf}
+`;
+
+Box.displayName = 'Restyled.Box';
 
 Box.propTypes = {
   ...space.propTypes,
@@ -36,15 +36,15 @@ Box.propTypes = {
   ...alignSelf.propTypes,
 };
 
-export const Flex = styled(Box)(
-  {
-    display: 'flex',
-  },
-  flexWrap,
-  flexDirection,
-  alignItems,
-  justifyContent,
-);
+export const Flex = styled(Box)`
+  display: flex;
+  ${flexWrap}
+  ${flexDirection}
+  ${alignItems}
+  ${justifyContent}
+`;
+
+Flex.displayName = 'Restyled.Flex';
 
 Flex.propTypes = {
   ...flexWrap.propTypes,

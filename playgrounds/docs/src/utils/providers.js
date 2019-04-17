@@ -1,9 +1,12 @@
 import React from 'react';
-import { Provider } from '@foostack-dev/restyled';
+import { Provider, Box, GlobalStyles } from '@foostack-dev/restyled';
 
 const providerDecorator = storyFunc => (
   <Provider>
-    <div>{storyFunc()}</div>
+    <Box p={2}>
+      <GlobalStyles />
+      {storyFunc()}
+    </Box>
   </Provider>
 );
 

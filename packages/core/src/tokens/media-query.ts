@@ -1,4 +1,5 @@
 import invariant from 'invariant';
+import { MediaQuery } from './design-system';
 
 interface Breakpoints {
   [name: string]: string;
@@ -25,25 +26,27 @@ export function getSizeFromBreakpoint(
   return returnValue;
 }
 
-export function generateMediaQuery(breakpoints: Breakpoints, css: Function) {
+export function generateMediaQuery(breakpoints: Breakpoints, css: Function): MediaQuery {
   invariant(breakpoints, '`breakpoints` object is needed to generate media queries.');
   invariant(css, '`css` function is needed to generate styles.');
 
-  const lessThan = (breakpoint: string) => <U extends any[]>(...args: U) => css`
+  const lessThan = (breakpoint: string): Function => <U extends any[]>(...args: U): U => css`
     @media (max-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}) {
       ${css(...args)}
     }
   `;
 
-  const greaterThan = (breakpoint: string) => <U extends any[]>(...args: U) => css`
+  const greaterThan = (breakpoint: string): Function => <U extends any[]>(...args: U): U => css`
     @media (min-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}) {
       ${css(...args)}
     }
   `;
 
-  const between = (firstBreakpoint: string, secondBreakpoint: string) => <U extends any[]>(
+  const between = (firstBreakpoint: string, secondBreakpoint: string): Function => <
+    U extends any[]
+  >(
     ...args: U
-  ) => css`
+  ): U => css`
     @media (min-width: ${getSizeFromBreakpoint(
         firstBreakpoint,
         breakpoints,

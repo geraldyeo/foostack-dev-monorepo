@@ -3,7 +3,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
-    'prettier',
     'prettier/@typescript-eslint',
   ],
   parser: '@typescript-eslint/parser',

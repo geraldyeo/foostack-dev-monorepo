@@ -1,40 +1,15 @@
 import get from 'lodash.get';
-import set from 'lodash.set';
 import invariant from 'invariant';
 
-/* ========================================
- * utils
- * ======================================== */
 interface Args {
   base?: number;
   unit?: string;
 }
 
-interface themedArgs {
+interface ThemedArgs {
   defaultValue?: string | number;
   transformValue?: (value: string | number) => string | number;
 }
-
-export const pxTo = (value: string | number, { base = 16, unit = 'rem' }: Args = {}): string =>
-  `${parseFloat(String(value)) / base}${unit}`;
-
-export const toPx = (value: string | number, { base = 16 }: Args = {}): string =>
-  `${parseFloat(String(value)) * base}px`;
-
-export const parseUnit = (str: string): string | null => {
-  const matched: RegExpMatchArray | null = str.trim().match(/[\d.\-+]*\s*(.*)/);
-  return matched && matched[1];
-};
-
-export const themed = (
-  key: string,
-  { defaultValue: df, transformValue: tx = v => v }: themedArgs = {},
-) => ({ theme }: { theme?: DesignTokens } = {}) => {
-  if (theme) {
-    return tx(DesignSystem.getValueFromToken(theme, key, df));
-  }
-  return df;
-};
 
 /* ========================================
  * Design System
@@ -54,7 +29,7 @@ interface FontWeights {
   [name: string]: number;
 }
 
-interface MediaQuery {
+export interface MediaQuery {
   between: (first: string, last: string) => any;
   greaterThan: (breakpoint: string) => any;
   lessThan: (breakpoint: string) => any;
@@ -76,13 +51,13 @@ export class DesignSystem<T extends DesignTokens> {
   private _ds: T;
   private _variant: string;
 
-  public static getValueFromToken(token: DesignTokens, key: string, defaultValue?: any) {
+  public static getValueFromToken(token: DesignTokens, key: string, defaultValue?: any): any {
     const value = get(token, key, defaultValue);
     invariant(value, `Key (${key}) not found in token.`);
     return value;
   }
 
-  public static getColorFromDS(ds: DesignTokens, key: string, variant: string) {
+  public static getColorFromDS(ds: DesignTokens, key: string, variant: string): string {
     const pathSeparator = /[.\[\]]/;
     const hasVariant = new RegExp(variant, 'i');
     const colors = DesignSystem.getValueFromToken(ds, 'colors');
@@ -91,14 +66,14 @@ export class DesignSystem<T extends DesignTokens> {
       if (hasVariant.test(key)) {
         return get(colors, key);
       }
-      const newKey: string[] = key.split(pathSeparator).filter(s => s !== '');
+      const newKey: string[] = key.split(pathSeparator).filter((s: string): boolean => s !== '');
       newKey.splice(1, 0, variant);
       return get(colors, newKey);
     }
     return get(colors, [key, variant]);
   }
 
-  constructor(token: T, variant = 'base') {
+  public constructor(token: T, variant = 'base') {
     invariant(token, 'A design token is needed.');
     this._ds = token;
     this._variant = variant;
@@ -156,5 +131,29 @@ export class DesignSystem<T extends DesignTokens> {
     };
   }
 }
+
+/* ========================================
+ * utils
+ * ======================================== */
+export const pxTo = (value: string | number, { base = 16, unit = 'rem' }: Args = {}): string =>
+  `${parseFloat(String(value)) / base}${unit}`;
+
+export const toPx = (value: string | number, { base = 16 }: Args = {}): string =>
+  `${parseFloat(String(value)) * base}px`;
+
+export const parseUnit = (str: string): string | null => {
+  const matched: RegExpMatchArray | null = str.trim().match(/[\d.\-+]*\s*(.*)/);
+  return matched && matched[1];
+};
+
+export const themed = (
+  key: string,
+  { defaultValue: df, transformValue: tx = v => v }: ThemedArgs = {},
+): Function => ({ theme }: { theme?: DesignTokens } = {}): any => {
+  if (theme) {
+    return tx(DesignSystem.getValueFromToken(theme, key, df));
+  }
+  return df;
+};
 
 export default DesignSystem;

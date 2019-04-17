@@ -1,6 +1,6 @@
 import { DesignSystem, generateMediaQuery } from '@foostack-dev/core';
 import { css } from 'styled-components';
-import { getDarkenedColor, getLightenedColor } from '../../../utils/colors';
+import { getDarkenedColor, getLightenedColor, getColors } from '../../../utils/colors';
 import * as styledVariants from './variants';
 
 const breakpoints = {
@@ -43,21 +43,23 @@ const breakpoints = {
  * greaterThan('large')`...css` // target desktops and up
  * greaterThan('huge')`...css` // target ultra-wide desktop monitors
  */
-const { between, greaterThan, lessThan } = generateMediaQuery(breakpoints, (...args) =>
-  css(...args),
-);
+const { between, greaterThan, lessThan } = generateMediaQuery(breakpoints, css);
+
+const accents = {
+  light: ['#247ba0', '#44c6ca', '#fce561', '#fcb813', '#d93d04'],
+  dark: ['#1c333d', '#1f7369', '#aa8f4e', '#b27647', '#a9513b'],
+};
 
 const token = {
   breakpoints: Object.values(breakpoints),
   colors: {
-    accents: { light: ['#049DBF', '#F2B705', '#F29F05', '#F27405', '#D93D04'] },
-    accentsLightened: {
-      light: ['#049DBF', '#F2B705', '#F29F05', '#F27405', '#D93D04'].map(getLightenedColor),
+    accents,
+    accentsLightened: getColors(accents, getLightenedColor),
+    accentsDarkened: getColors(accents, getDarkenedColor),
+    neutrals: {
+      light: ['#f2f2f2', '#d9d9d9', '#a6a6a6', '#595959', '#262626'],
+      dark: ['#f2f2f2', '#d9d9d9', '#a6a6a6', '#595959', '#262626'],
     },
-    accentsDarkened: {
-      light: ['#049DBF', '#F2B705', '#F29F05', '#F27405', '#D93D04'].map(getDarkenedColor),
-    },
-    neutrals: { light: ['#F2F2F2', '#D9D9D9', '#A6A6A6', '#595959', '#262626'] },
   },
   fonts: {
     system:
