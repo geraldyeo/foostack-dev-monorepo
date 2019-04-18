@@ -1,4 +1,5 @@
 import get from 'lodash.get';
+import identity from 'lodash.identity';
 import invariant from 'invariant';
 
 interface Args {
@@ -41,6 +42,7 @@ interface DesignTokens {
   fonts?: FontFamilies;
   fontSizes?: number[];
   fontWeights?: FontWeights;
+  lineHeights?: number[];
   media?: MediaQuery;
   radii?: number[];
   space?: number[];
@@ -107,6 +109,10 @@ export class DesignSystem<T extends DesignTokens> {
     return this.get('fontWeights');
   }
 
+  public get lineHeights(): number[] {
+    return this.get('lineHeights');
+  }
+
   public get radii(): number[] {
     return this.get('radii');
   }
@@ -141,14 +147,17 @@ export const pxTo = (value: string | number, { base = 16, unit = 'rem' }: Args =
 export const toPx = (value: string | number, { base = 16 }: Args = {}): string =>
   `${parseFloat(String(value)) * base}px`;
 
-export const parseUnit = (str: string): string | null => {
+export const txPx = (value: string | number): string => toPx(value, { base: 1 });
+
+export const parseUnit = (str: string): [number, string] => {
+  const num: number = parseFloat(str);
   const matched: RegExpMatchArray | null = str.trim().match(/[\d.\-+]*\s*(.*)/);
-  return matched && matched[1];
+  return [num, (matched && matched[1]) || ''];
 };
 
 export const themed = (
   key: string,
-  { defaultValue: df, transformValue: tx = v => v }: ThemedArgs = {},
+  { defaultValue: df, transformValue: tx = identity }: ThemedArgs = {},
 ): Function => ({ theme }: { theme?: DesignTokens } = {}): any => {
   if (theme) {
     return tx(DesignSystem.getValueFromToken(theme, key, df));

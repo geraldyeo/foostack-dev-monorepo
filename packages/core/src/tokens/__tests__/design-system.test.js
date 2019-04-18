@@ -1,4 +1,4 @@
-import DesignSystem, { pxTo, toPx, parseUnit, themed } from '../design-system';
+import DesignSystem, { pxTo, toPx, txPx, parseUnit, themed } from '../design-system';
 
 describe('DesignSystem', () => {
   let ds;
@@ -36,6 +36,7 @@ describe('DesignSystem', () => {
         light: 300,
         regular: 400,
       },
+      lineHeights: [0.7, 1.4, 2.8],
       radii: [0, 2, 4],
       space: [0, 4, 8, 16, 32],
     };
@@ -79,6 +80,18 @@ describe('DesignSystem', () => {
       expect(ds.fontWeights).toEqual(token.fontWeights);
     });
 
+    it('should get lineHeights property', () => {
+      expect(ds.lineHeights).toEqual(token.lineHeights);
+    });
+
+    it('should get radii property', () => {
+      expect(ds.radii).toEqual(token.radii);
+    });
+
+    it('should get space property', () => {
+      expect(ds.space).toEqual(token.space);
+    });
+
     it('should get variant property', () => {
       expect(ds.variant).toEqual('base');
     });
@@ -91,14 +104,6 @@ describe('DesignSystem', () => {
       expect(ds.variant).toEqual('dark');
     });
 
-    it('should get radii property', () => {
-      expect(ds.radii).toEqual(token.radii);
-    });
-
-    it('should get space property', () => {
-      expect(ds.space).toEqual(token.space);
-    });
-
     describe('helpers', () => {
       it('should convert px to rem unit', () => {
         const expected = '2rem';
@@ -107,20 +112,37 @@ describe('DesignSystem', () => {
       });
 
       it('should convert px to em unit', () => {
-        const expected = '2em';
-        const value = pxTo('32px', { unit: 'em' });
+        let expected = '2rem';
+        let value = pxTo('32px');
+        expect(value).toBe(expected);
+
+        expected = '2em';
+        value = pxTo('32px', { unit: 'em' });
         expect(value).toBe(expected);
       });
 
       it('should convert to px unit', () => {
         const expected = '32px';
-        const value = toPx('2rem');
+        let value = toPx('2rem');
+        expect(value).toBe(expected);
+
+        value = toPx(4, { base: 8 });
+        expect(value).toBe(expected);
+
+        value = toPx('2rem', { base: 16 });
+        expect(value).toBe(expected);
+      });
+
+      it('should transform value to px unit', () => {
+        const expected = '32px';
+        let value = txPx(32);
         expect(value).toBe(expected);
       });
 
       it('should parse unit', () => {
-        expect(parseUnit('2em')).toBe('em');
-        expect(parseUnit('2rem')).toBe('rem');
+        expect(parseUnit('2')).toEqual([2, '']);
+        expect(parseUnit('2em')).toEqual([2, 'em']);
+        expect(parseUnit('2rem')).toEqual([2, 'rem']);
       });
 
       it('should get value from theme', () => {

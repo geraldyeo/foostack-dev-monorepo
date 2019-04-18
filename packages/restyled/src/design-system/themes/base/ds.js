@@ -1,4 +1,4 @@
-import { DesignSystem, generateMediaQuery } from '@foostack-dev/core';
+import { DesignSystem, generateMediaQuery, ms } from '@foostack-dev/core';
 import { css } from 'styled-components';
 import { getDarkenedColor, getLightenedColor, getColors } from '../../../utils/colors';
 import * as styledVariants from './variants';
@@ -50,16 +50,15 @@ const accents = {
   dark: ['#1c333d', '#1f7369', '#aa8f4e', '#b27647', '#a9513b'],
 };
 
+const neutrals = ['#f2f2f2', '#d9d9d9', '#a6a6a6', '#595959', '#262626'];
+
 const token = {
   breakpoints: Object.values(breakpoints),
   colors: {
     accents,
     accentsLightened: getColors(accents, getLightenedColor),
     accentsDarkened: getColors(accents, getDarkenedColor),
-    neutrals: {
-      light: ['#f2f2f2', '#d9d9d9', '#a6a6a6', '#595959', '#262626'],
-      dark: ['#f2f2f2', '#d9d9d9', '#a6a6a6', '#595959', '#262626'],
-    },
+    neutrals: { light: neutrals, dark: neutrals },
   },
   fonts: {
     system:
@@ -68,7 +67,8 @@ const token = {
     robotoMono: '"Roboto Mono", monospace, serif',
     robotoSlab: '"Roboto Slab", serif',
   },
-  fontSizes: [12, 14, 16, 18, 24, 32, 36, 48, 64, 72, 96],
+  // @see {@link https://type-scale.com/}
+  fontSizes: new Array(12).fill(0).map((_, i) => ms(i - 2, 'major third') * 16),
   fontWeights: {
     thin: 100,
     light: 300,
@@ -76,9 +76,13 @@ const token = {
     medium: 500,
     bold: 700,
   },
+  lineHeights: new Array(6).fill(0).map((_, i) => ms(i + 1, 'perfect fourth')),
   media: { between, greaterThan, lessThan },
   radii: [0, 2, 4, 6],
-  space: [0, 8, 16, 24, 32, 64, 128, 256, 512],
+  space: new Array(11)
+    .fill(0)
+    .map((_, i) => i * 8)
+    .concat([128, 256, 512]),
   styledVariants,
 };
 

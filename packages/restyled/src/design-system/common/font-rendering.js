@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 
 export const fontRendering = css`
-  html {
+  :root {
     /* Adjust font size 1em = 10px on default browser settings */
-    font-size: 62.5%;
+    font-size: 100%;
     text-size-adjust: 100%;
     /* Font variant */
     font-variant-ligatures: none;
@@ -14,7 +14,8 @@ export const fontRendering = css`
     -webkit-font-smoothing: antialiased;
   }
   body {
-    font-size: 1.6rem;
+    font-size: 1em;
+    line-height: 1.4;
   }
 `;
 
