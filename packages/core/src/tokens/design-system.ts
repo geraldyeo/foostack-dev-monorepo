@@ -138,7 +138,7 @@ export class DesignSystem<T extends DesignTokens> {
 export const pxTo = (value: string | number, { base = 16, unit = 'rem' }: Args = {}): string =>
   `${parseFloat(String(value)) / base}${unit}`;
 
-export const toPx = (value: string | number, { base = 16 }: Args = {}): string =>
+export const toPx = (value: string | number, { base = 1 }: Args = {}): string =>
   `${parseFloat(String(value)) * base}px`;
 
 export const parseUnit = (str: string): string | null => {

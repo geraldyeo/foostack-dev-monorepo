@@ -114,7 +114,10 @@ describe('DesignSystem', () => {
 
       it('should convert to px unit', () => {
         const expected = '32px';
-        const value = toPx('2rem');
+        let value = toPx(32);
+        expect(value).toBe(expected);
+
+        value = toPx('2rem', { base: 16 });
         expect(value).toBe(expected);
       });
 

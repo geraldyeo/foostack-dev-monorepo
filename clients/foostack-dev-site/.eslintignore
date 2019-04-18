@@ -1,0 +1,6 @@
+# IGNORE THESE
+build/
+dist/
+lib/
+# DO NOT IGNORE!
+!.eslintrc.js
