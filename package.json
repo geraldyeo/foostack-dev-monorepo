@@ -25,8 +25,8 @@
     "build": "yarn run build:packages && yarn run build:clients",
     "build:packages": "lerna run build --parallel --scope '@foostack-dev/{core,restyled}'",
     "build:clients": "lerna run build --parallel --scope '@foostack-dev/site'",
-    "build:playgrounds": "lerna run build --parallel --scope '@foostack-dev/storybook'",
-    "develop:packages": "lerna run develop --parallel --scope '@foostack-dev/{core,restyled}'",
+    "build:docs": "lerna run build --parallel --scope '@foostack-dev/storybook'",
+    "develop": "lerna run develop --parallel --scope '@foostack-dev/{core,restyled,site}'",
     "develop:docs": "lerna run develop --parallel --scope '@foostack-dev/storybook'",
     "lint": "concurrently -k -r yarn:lint:*",
     "lint:clients": "eslint \"clients/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
@@ -113,6 +113,6 @@
     "react-hooks-testing-library": "^0.5.0",
     "react-testing-library": "^6.1.2",
     "rimraf": "^2.6.3",
-    "typescript": "^3.4.4"
+    "typescript": "^3.4.5"
   }
 }

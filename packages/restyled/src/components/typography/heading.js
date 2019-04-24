@@ -15,7 +15,7 @@ Heading.propTypes = {
 Heading.defaultProps = {
   as: 'h2',
   m: 0,
-  fontFamily: 'robotoSlab',
+  fontFamily: 'montserrat',
   fontSize: 4,
   fontWeight: 'bold',
   variation: 'default',

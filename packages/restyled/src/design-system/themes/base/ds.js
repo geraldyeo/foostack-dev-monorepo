@@ -63,9 +63,9 @@ const token = {
   fonts: {
     system:
       'system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-    roboto: 'Roboto, sans-serif',
-    robotoMono: '"Roboto Mono", monospace, serif',
-    robotoSlab: '"Roboto Slab", serif',
+    merriweather: '"Merriweather", serif',
+    montserrat: '"Montserrat", san-serif',
+    robotomono: '"Roboto Mono", monospace',
   },
   // @see {@link https://type-scale.com/}
   fontSizes: new Array(12).fill(0).map((_, i) => ms(i - 2, 'major third') * 16),

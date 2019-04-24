@@ -8754,10 +8754,10 @@ gatsby-cli@^2.5.9:
     yargs "^12.0.5"
     yurnalist "^1.0.2"
 
-gatsby-image@^2.0.39:
-  version "2.0.39"
-  resolved "https://registry.npmjs.org/gatsby-image/-/gatsby-image-2.0.39.tgz#4dc7aab0bfbbfb9ce737a3814d8343a7ee02df17"
-  integrity sha512-yXuduhxGNG8T52VUJK8w+ZbcLwVuZSyA64R6fizbgqVKmefLlYc622k6MiLPic3qswiJgkAw70h700esErTcpw==
+gatsby-image@^2.0.40:
+  version "2.0.40"
+  resolved "https://registry.npmjs.org/gatsby-image/-/gatsby-image-2.0.40.tgz#eb59aca8891804464e339baa7421d78f4b7a66c4"
+  integrity sha512-iH2+F/J0DiDXeiC2n/grI1QrcXNJDVxnxxCedHeE0/0iUFwlQ52TYyRPbCSnIZg0xcOmr1FB7EaRCoqi7rddVg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
@@ -8850,10 +8850,10 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@^2.0.50:
-  version "2.0.50"
-  resolved "https://registry.npmjs.org/gatsby-source-contentful/-/gatsby-source-contentful-2.0.50.tgz#6cb287540800f670e9c74276d94ad2b8c8905c30"
-  integrity sha512-RsCamti8j8WcUpWxMP6AqNykntFkf9+UXJVp26uaCmihHH2QAgKgt8LleO2St39GqO62wVNuZyluQyVtU7OX+w==
+gatsby-source-contentful@^2.0.52:
+  version "2.0.52"
+  resolved "https://registry.npmjs.org/gatsby-source-contentful/-/gatsby-source-contentful-2.0.52.tgz#c79f7a8fa6ba717e94f7fdc7085946a8f13b2f85"
+  integrity sha512-nyYaSWiAUHO259MX6Bi8F1FRgORABGrgZJ79umfW92lzEYKUgjq/Awd+718IKWCd8GBGxc6HbJmx5CNsjOrt6g==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -8863,16 +8863,16 @@ gatsby-source-contentful@^2.0.50:
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
     gatsby-plugin-sharp "^2.0.35"
-    gatsby-source-filesystem "^2.0.29"
+    gatsby-source-filesystem "^2.0.31"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.10"
     qs "^6.4.0"
 
-gatsby-source-filesystem@^2.0.29:
-  version "2.0.29"
-  resolved "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.29.tgz#2cc2746072d8bb60d5818cd64bcd7e7754873090"
-  integrity sha512-Eeh4C2iBIE8rCooIF/oE7l5nH6aYMw1RLpvwiQl8qNhBUM8JHqKAm+UpKrkb9uZ/Jj8OTB9wW2LcoJkCE5iKew==
+gatsby-source-filesystem@^2.0.31:
+  version "2.0.31"
+  resolved "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.31.tgz#6d60fbd9bd579cdf1e0ce1c698e477fd312e2860"
+  integrity sha512-m+poVJbGzO9ZWQyfsFKxu6YPPF1OuujfTXsZc12PSQq57cPfXhEz8YWDMiYIIO9NvTX3XLWwCEOTlZu0s+QgQg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
@@ -8922,10 +8922,10 @@ gatsby-transformer-sharp@^2.1.17:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@^2.3.25:
-  version "2.3.25"
-  resolved "https://registry.npmjs.org/gatsby/-/gatsby-2.3.25.tgz#1b430090c322c8ac71bfc01be750ed87ed16ff8e"
-  integrity sha512-c14iiiGB84pYWwW4TTN8SVm7ffYaUtqEeN65pzMy345y6OJoQEUOkk7Cx2tpG4beRd6DwVfsgKAg4YQEnszcGg==
+gatsby@^2.3.27:
+  version "2.3.27"
+  resolved "https://registry.npmjs.org/gatsby/-/gatsby-2.3.27.tgz#ee5f922e39eb9ee4b6d202f01a5b0133e358a121"
+  integrity sha512-Rg0KPebYsHx6QRKMnF1NqLhxpwc2OXaTHRnatqWOq0rFxzS6Dxgfzj44jM6//t+yeDj+52Fdy3oMF1g1sOok4w==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -17837,10 +17837,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.4.4:
-  version "3.4.4"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-3.4.4.tgz#aac4a08abecab8091a75f10842ffa0631818f785"
-  integrity sha512-xt5RsIRCEaf6+j9AyOBgvVuAec0i92rgCaS3S+UVf5Z/vF2Hvtsw08wtUTJqp4djwznoAgjSxeCcU4r+CcDBJA==
+typescript@^3.4.5:
+  version "3.4.5"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
+  integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
 
 typography-normalize@^0.16.19:
   version "0.16.19"

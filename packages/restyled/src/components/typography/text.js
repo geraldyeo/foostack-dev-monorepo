@@ -23,7 +23,7 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  fontFamily: 'roboto',
+  fontFamily: 'merriweather',
   variation: 'default',
 };
 

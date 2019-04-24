@@ -42,7 +42,7 @@ Button.defaultProps = {
   border: 0,
   borderRadius: 2,
   color: 'white',
-  fontFamily: 'roboto',
+  fontFamily: 'montserrat',
   fontSize: 'inherit',
   fontWeight: 'regular',
   m: 0,

@@ -19,7 +19,7 @@
     "build": "yarn run build:types && yarn run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel --root-mode upward src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "develop": "yarn run develop:js",
+    "develop": "concurrently -k -r yarn:develop:*",
     "develop:types": "tsc --noEmit --watch",
     "develop:js": "yarn run build --watch"
   },
