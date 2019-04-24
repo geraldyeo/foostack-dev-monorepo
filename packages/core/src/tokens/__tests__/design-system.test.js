@@ -45,6 +45,10 @@ describe('DesignSystem', () => {
       ds = new DesignSystem(token, 'base');
     });
 
+    it('should return undefined if key does not exist', () => {
+      expect(DesignSystem.getValueFromToken(ds, 'styledVariants.NonExistent')).toBeUndefined();
+    });
+
     it('should return the design system token', () => {
       expect(ds.toJSON()).toEqual({ ...token, variant: 'base' });
     });

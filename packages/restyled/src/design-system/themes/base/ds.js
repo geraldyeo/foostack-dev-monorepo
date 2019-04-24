@@ -70,11 +70,10 @@ const token = {
   // @see {@link https://type-scale.com/}
   fontSizes: new Array(12).fill(0).map((_, i) => ms(i - 2, 'major third') * 16),
   fontWeights: {
-    thin: 100,
     light: 300,
     regular: 400,
-    medium: 500,
     bold: 700,
+    black: 900,
   },
   lineHeights: new Array(6).fill(0).map((_, i) => ms(i + 1, 'perfect fourth')),
   media: { between, greaterThan, lessThan },

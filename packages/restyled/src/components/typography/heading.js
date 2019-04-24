@@ -17,7 +17,7 @@ Heading.defaultProps = {
   m: 0,
   fontFamily: 'montserrat',
   fontSize: 4,
-  fontWeight: 'bold',
+  fontWeight: 'black',
   variation: 'default',
 };
 

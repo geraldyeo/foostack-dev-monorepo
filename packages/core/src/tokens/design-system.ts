@@ -31,9 +31,9 @@ interface FontWeights {
 }
 
 export interface MediaQuery {
-  between: (first: string, last: string) => any;
-  greaterThan: (breakpoint: string) => any;
-  lessThan: (breakpoint: string) => any;
+  between: (first: string, last: string) => Function;
+  greaterThan: (breakpoint: string) => Function;
+  lessThan: (breakpoint: string) => Function;
 }
 
 interface DesignTokens {
@@ -53,8 +53,16 @@ export class DesignSystem<T extends DesignTokens> {
   private _ds: T;
   private _variant: string;
 
-  public static getValueFromToken(token: DesignTokens, key: string, defaultValue?: any): any {
+  public static getValueFromToken(
+    token: DesignTokens,
+    key: string,
+    defaultValue?: string | number,
+  ): string | number | object | string[] | number[] {
     const value = get(token, key, defaultValue);
+    if (/styledvariants/i.test(key)) {
+      // variants might not exist, this is fine, just return.
+      return value;
+    }
     invariant(value, `Key (${key}) not found in token.`);
     return value;
   }
@@ -81,7 +89,10 @@ export class DesignSystem<T extends DesignTokens> {
     this._variant = variant;
   }
 
-  public get(key: string, defaultValue?: any): any {
+  public get(
+    key: string,
+    defaultValue?: string | number,
+  ): string | number | object | string[] | number[] {
     return DesignSystem.getValueFromToken(this._ds, key, defaultValue);
   }
 
@@ -90,35 +101,35 @@ export class DesignSystem<T extends DesignTokens> {
   }
 
   public get breakpoints(): string[] {
-    return this.get('breakpoints');
+    return this.get('breakpoints') as string[];
   }
 
   public get colors(): Colors {
-    return this.get('colors');
+    return this.get('colors') as Colors;
   }
 
   public get fonts(): FontFamilies {
-    return this.get('fonts');
+    return this.get('fonts') as FontFamilies;
   }
 
   public get fontSizes(): number[] {
-    return this.get('fontSizes');
+    return this.get('fontSizes') as number[];
   }
 
   public get fontWeights(): FontWeights {
-    return this.get('fontWeights');
+    return this.get('fontWeights') as FontWeights;
   }
 
   public get lineHeights(): number[] {
-    return this.get('lineHeights');
+    return this.get('lineHeights') as number[];
   }
 
   public get radii(): number[] {
-    return this.get('radii');
+    return this.get('radii') as number[];
   }
 
   public get space(): number[] {
-    return this.get('space');
+    return this.get('space') as number[];
   }
 
   public get variant(): string {
@@ -158,9 +169,9 @@ export const parseUnit = (str: string): [number, string] => {
 export const themed = (
   key: string,
   { defaultValue: df, transformValue: tx = identity }: ThemedArgs = {},
-): Function => ({ theme }: { theme?: DesignTokens } = {}): any => {
+): Function => ({ theme }: { theme?: DesignTokens } = {}): string | number | undefined => {
   if (theme) {
-    return tx(DesignSystem.getValueFromToken(theme, key, df));
+    return tx(DesignSystem.getValueFromToken(theme, key, df) as string);
   }
   return df;
 };
