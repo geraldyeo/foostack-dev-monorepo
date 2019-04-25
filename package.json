@@ -28,9 +28,10 @@
     "build:docs": "lerna run build --parallel --scope '@foostack-dev/storybook'",
     "develop": "lerna run develop --parallel --scope '@foostack-dev/{core,restyled,site}'",
     "develop:docs": "lerna run develop --parallel --scope '@foostack-dev/storybook'",
-    "lint": "concurrently -k -r yarn:lint:*",
+    "lint": "yarn run lint:js && yarn run lint:ts",
     "lint:clients": "eslint \"clients/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
-    "lint:packages": "eslint \"packages/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
+    "lint:ts": "eslint \"packages/core/src/**/*.ts\" --cache --cache-location \"./node_modules/.cache/\"",
+    "lint:js": "eslint \"packages/restyled/src/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",
     "test": "cross-env NODE_ENV=test jest --passWithNoTests",
     "test:coverage": "yarn run test --coverage",
     "test:codacy-coverage": "cat ./coverage/lcov.info | codacy-coverage"

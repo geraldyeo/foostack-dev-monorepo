@@ -1,7 +1,7 @@
 import toString from './safe-string';
 
 // Escape string into unicode sequences
-export const escapeUnicode = (str?: string, shouldEscapePrintable?: boolean) =>
+export const escapeUnicode = (str?: string, shouldEscapePrintable?: boolean): string =>
   toString(str).replace(
     /[\s\S]/g,
     (matched: string): string => {

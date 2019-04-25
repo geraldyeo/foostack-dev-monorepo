@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
-import baseTheme from '../../design-system/themes/base/ds';
+import { baseTheme } from '../../design-system/themes/base/ds';
 
 export const Provider = ({ children, theme, ...props }) => {
   const defaultTheme = useRef(baseTheme);

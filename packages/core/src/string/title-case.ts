@@ -2,9 +2,9 @@ import toString from './safe-string';
 
 // Title case a string
 export const titleCase = (str: string, { except = [] } = {}): string => {
-  const alphaNumeric: RegExp = /([A-Za-z0-9\u00C0-\u00FF])/;
-  const smallWords: RegExp = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|v.?|vs.?|via)$/i;
-  const wordSeparators: RegExp = /([ :–—-])/;
+  const alphaNumeric = /([A-Za-z0-9\u00C0-\u00FF])/;
+  const smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|v.?|vs.?|via)$/i;
+  const wordSeparators = /([ :–—-])/;
 
   return toString(str)
     .split(wordSeparators)
@@ -40,7 +40,7 @@ export const titleCase = (str: string, { except = [] } = {}): string => {
           return curr;
         }
         // Capitalize the first letter
-        return curr.replace(alphaNumeric, match => match.toUpperCase());
+        return curr.replace(alphaNumeric, (match: string): string => match.toUpperCase());
       },
     )
     .join('');

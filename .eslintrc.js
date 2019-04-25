@@ -2,6 +2,8 @@ module.exports = {
   extends: [
     'react-app',
     'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:jest/recommended',
