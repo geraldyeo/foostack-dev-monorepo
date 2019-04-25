@@ -9,7 +9,7 @@ interface Args {
 
 interface ThemedArgs {
   defaultValue?: string | number;
-  transformValue?: (value: string | number) => string | number;
+  transformValue?(value: string | number): string | number;
 }
 
 /* ========================================
@@ -31,9 +31,9 @@ interface FontWeights {
 }
 
 export interface MediaQuery {
-  between: (first: string, last: string) => Function;
-  greaterThan: (breakpoint: string) => Function;
-  lessThan: (breakpoint: string) => Function;
+  between(first: string, last: string): Function;
+  greaterThan(breakpoint: string): Function;
+  lessThan(breakpoint: string): Function;
 }
 
 interface DesignTokens {
@@ -83,7 +83,7 @@ export class DesignSystem<T extends DesignTokens> {
     return get(colors, [key, variant]);
   }
 
-  public constructor(token: T, variant = 'base') {
+  public constructor(token: T, variant: string = 'base') {
     invariant(token, 'A design token is needed.');
     this._ds = token;
     this._variant = variant;

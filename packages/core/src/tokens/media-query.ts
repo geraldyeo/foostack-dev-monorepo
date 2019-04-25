@@ -12,10 +12,10 @@ export const defaultBreakpoints: Breakpoints = {
   huge: '1800px',
 };
 
-export function getSizeFromBreakpoint(
+export const getSizeFromBreakpoint = (
   breakpointValue: string,
   breakpoints: Breakpoints = defaultBreakpoints,
-): string {
+): string => {
   invariant(breakpointValue, 'Breakpoint value not specified.');
   let returnValue = '0';
   if (breakpoints[breakpointValue]) {
@@ -24,26 +24,26 @@ export function getSizeFromBreakpoint(
     returnValue = breakpointValue;
   }
   return returnValue;
-}
+};
 
-export function generateMediaQuery(breakpoints: Breakpoints, css: Function): MediaQuery {
+export const generateMediaQuery = (breakpoints: Breakpoints, css: Function): MediaQuery => {
   invariant(breakpoints, '`breakpoints` object is needed to generate media queries.');
   invariant(css, '`css` function is needed to generate styles.');
 
-  const lessThan = (breakpoint: string): Function => <U extends any[]>(...args: U): U => css`
+  const lessThan = (breakpoint: string): Function => <U extends string[]>(...args: U): U => css`
     @media (max-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}) {
       ${css(...args)}
     }
   `;
 
-  const greaterThan = (breakpoint: string): Function => <U extends any[]>(...args: U): U => css`
+  const greaterThan = (breakpoint: string): Function => <U extends string[]>(...args: U): U => css`
     @media (min-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}) {
       ${css(...args)}
     }
   `;
 
   const between = (firstBreakpoint: string, secondBreakpoint: string): Function => <
-    U extends any[]
+    U extends string[]
   >(
     ...args: U
   ): U => css`
@@ -56,8 +56,8 @@ export function generateMediaQuery(breakpoints: Breakpoints, css: Function): Med
   `;
 
   return {
-    lessThan,
-    greaterThan,
     between,
+    greaterThan,
+    lessThan,
   };
-}
+};

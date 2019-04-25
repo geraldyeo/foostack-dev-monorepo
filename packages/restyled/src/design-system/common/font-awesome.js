@@ -6,6 +6,6 @@ import { far as fapr } from '@fortawesome/pro-regular-svg-icons';
 import { fas as faps } from '@fortawesome/pro-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-export FontAwesome from '@fortawesome/react-fontawesome';
+export { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const FALibrary = library.add(fab, far, fas, fapl, fapr, faps);
 export default FALibrary;

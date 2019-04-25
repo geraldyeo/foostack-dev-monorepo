@@ -2,5 +2,6 @@
 build/
 dist/
 lib/
+node_modules/
 # DO NOT IGNORE!
 !.eslintrc.js
