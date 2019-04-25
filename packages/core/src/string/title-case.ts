@@ -40,7 +40,7 @@ export const titleCase = (str: string, { except = [] } = {}): string => {
           return curr;
         }
         // Capitalize the first letter
-        return curr.replace(alphaNumeric, match => match.toUpperCase());
+        return curr.replace(alphaNumeric, (match: string): string => match.toUpperCase());
       },
     )
     .join('');
