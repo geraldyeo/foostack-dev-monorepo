@@ -17,7 +17,11 @@ stories
   .add('Default Heading', () => {
     return <Heading>Test</Heading>;
   })
-  .add('Headings h1 - h6', () => {
+  .add('Primary Heading', () => {
+    baseTheme.variant = select(label, options, defaultValue);
+    return <Heading variation="primary">Test</Heading>;
+  })
+  .add('Default Headings h1 - h6', () => {
     baseTheme.variant = select(label, options, defaultValue);
     return (
       <>

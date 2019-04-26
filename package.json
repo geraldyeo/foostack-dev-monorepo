@@ -27,6 +27,7 @@
     "build:clients": "lerna run build --parallel --scope '@foostack-dev/site'",
     "build:docs": "lerna run build --parallel --scope '@foostack-dev/storybook'",
     "develop": "lerna run develop --parallel --scope '@foostack-dev/{core,restyled,site}'",
+    "develop:packages": "lerna run develop --parallel --scope '@foostack-dev/{core,restyled}'",
     "develop:docs": "lerna run develop --parallel --scope '@foostack-dev/storybook'",
     "lint": "yarn run lint:js && yarn run lint:ts",
     "lint:clients": "eslint \"clients/**/*.js\" --cache --cache-location \"./node_modules/.cache/\"",

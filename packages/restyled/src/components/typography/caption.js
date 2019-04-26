@@ -9,12 +9,12 @@ export const Caption = styled(Text)`
 
 Caption.propTypes = {
   ...Text.propTypes,
-  variation: PropTypes.oneOf(['default']),
+  variation: PropTypes.oneOf(['default', 'primary']),
 };
 
 Caption.defaultProps = {
+  ...Text.defaultProps,
   as: 'small',
-  fontFamily: 'merriweather',
   fontSize: 0,
   variation: 'default',
 };

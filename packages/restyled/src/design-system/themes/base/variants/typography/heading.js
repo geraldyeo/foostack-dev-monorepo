@@ -24,18 +24,30 @@ const typographyStyles = css`
         h5: [3, 4, 5],
         h6: [2, 3, 4],
       },
+      lineheights: {
+        h1: [0, 1, 2],
+        h2: [0, 1, 2],
+        h3: [0, 0, 1],
+        h4: [0, 0, 1],
+        h5: [0, 0, 0],
+        h6: [0, 0, 0],
+      },
     };
     const [fss, fsn, fsh] = responsive.headings[as];
+    const [lhs, lhn, lhh] = responsive.lineheights[as];
     const opts = { transformValue: txPx };
 
     // vertical rhythm
     return css`
       font-size: ${themed(`fontSizes.${fss}`, opts)};
+      line-height: ${themed(`lineHeights.${lhs}`)};
       ${media.greaterThan('small')`
         font-size: ${themed(`fontSizes.${fsn}`, opts)};
+        line-height: ${themed(`lineHeights.${lhn}`)};
       `}
       ${media.greaterThan('huge')`
         font-size: ${themed(`fontSizes.${fsh}`, opts)};
+        line-height: ${themed(`lineHeights.${lhh}`)};
       `}
     `;
   }}
