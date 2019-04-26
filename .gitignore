@@ -125,6 +125,7 @@ public
 !.vscode/extensions.json
 
 # foostack
+.out-*
 build
 dist
 lib
