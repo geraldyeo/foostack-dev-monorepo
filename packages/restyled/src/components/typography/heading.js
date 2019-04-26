@@ -9,7 +9,7 @@ export const Heading = styled(Text)`
 
 Heading.propTypes = {
   ...Text.propTypes,
-  variation: PropTypes.oneOf(['default']),
+  variation: PropTypes.oneOf(['default', 'primary']),
 };
 
 Heading.defaultProps = {

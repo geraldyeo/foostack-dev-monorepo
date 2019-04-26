@@ -12,13 +12,12 @@ export const Quote = styled(Text)`
 
 Quote.propTypes = {
   ...Text.propTypes,
-  variation: PropTypes.oneOf(['default']),
+  variation: PropTypes.oneOf(['default', 'primary']),
 };
 
 Quote.defaultProps = {
   as: 'blockquote',
   borderLeft: '4px solid',
-  fontFamily: 'merriweather',
   fontSize: 4,
   fontWeight: 'bold',
   pl: 2,
