@@ -5,18 +5,18 @@ import { themed, txPx } from '@foostack-dev/core';
 const colorsStyles = theming.variants('variant', 'variation', {
   primary: {
     light: css`
-      color: ${themed('colors.neutrals.light.4')};
+      color: ${themed('colors.texts.light.3')};
     `,
     dark: css`
-      color: ${themed('colors.neutrals.dark.0')};
+      color: ${themed('colors.texts.dark.0')};
     `,
   },
   body: {
     light: css`
-      color: ${themed('colors.neutrals.light.3')};
+      color: ${themed('colors.texts.light.2')};
     `,
     dark: css`
-      color: ${themed('colors.neutrals.dark.1')};
+      color: ${themed('colors.texts.dark.1')};
     `,
   },
 });
