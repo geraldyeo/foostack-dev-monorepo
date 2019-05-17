@@ -14,7 +14,7 @@ export const fontRendering = css`
     -webkit-font-smoothing: antialiased;
   }
   body {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.4;
   }
 `;
