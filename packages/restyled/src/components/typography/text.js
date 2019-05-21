@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { themed } from '@foostack-dev/core';
 import { fontFamily, fontWeight, textAlign, lineHeight, letterSpacing } from 'styled-system';
-import { Box } from '../core/box';
+import { Box } from '../layouts/box';
 
 export const Text = styled(Box)`
   ${fontFamily}

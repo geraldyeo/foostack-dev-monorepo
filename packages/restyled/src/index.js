@@ -6,4 +6,5 @@ export { baseTheme } from './design-system/themes/base/ds';
 
 export * from './components/controls';
 export * from './components/core';
+export * from './components/layouts';
 export * from './components/typography';
