@@ -46,18 +46,18 @@ const breakpoints = {
 const { between, greaterThan, lessThan } = generateMediaQuery(breakpoints, css);
 
 const accents = {
-  light: ['#247ba0', '#44c6ca', '#fce561', '#fcb813', '#d93d04'],
-  dark: ['#1f487e', '#247ba0', '#393e46', '#222831', '#fb3640'],
+  light: ['#007fef', '#6669e6', '#b747c2', '#e1148c', '#eb034f', '#d93d04'],
+  dark: ['#2f4858', '#394e79', '#6b498a', '#a6357e', '#d01c52', '#d93d04'],
 };
 
 const neutrals = {
-  light: ['#e6e6e6', '#d6d6d6', '#c6c6c6', '#b6b6b6', '#a6a6a6'],
-  dark: ['#969696', '#868686', '#767676', '#666666', '#565656'],
+  light: ['#f6f6f6', '#e6e6e6', '#d6d6d6', '#c6c6c6', '#b6b6b6'],
+  dark: ['#565656', '#464646', '#363636', '#262626', '#161616'],
 };
 
 const texts = {
-  light: ['#5a6a7a', '#4a5a6a', '#3a4a5a', '#2a3a4a', '#1a2a3a'],
-  dark: ['#7a8a9a', '#6a7a8a', '#5a6a7a', '#4a5a6a', '#3a4a5a'],
+  light: ['#2f333a', '#4b5056', '#696e76', '#898e95', '#aaafB7'],
+  dark: ['#5d6167', '#787d84', '#979ca3', '#b7bbC3', '#d7dce4'],
 };
 
 const token = {

@@ -22,7 +22,6 @@ stories
     return <Heading variation="primary">Test</Heading>;
   })
   .add('Default Headings h1 - h6', () => {
-    baseTheme.variant = select(label, options, defaultValue);
     return (
       <>
         <Heading as="h1">
