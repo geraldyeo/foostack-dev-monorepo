@@ -9,7 +9,7 @@ import {
   fontFamily,
   fontWeight,
 } from 'styled-system';
-import { Box } from '../core/box';
+import { Box } from '../layouts/box';
 
 export const Button = styled(Box)`
   appearance: none;
