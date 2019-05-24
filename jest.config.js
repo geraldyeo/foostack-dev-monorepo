@@ -11,6 +11,7 @@ module.exports = {
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
     '/node_modules/',
+    '/__mocks__/',
     '/__tests__/',
     '<rootDir>/coverage',
     '<rootDir>/jest',
@@ -19,8 +20,8 @@ module.exports = {
   // A map from regular expressions to module names that allow to stub out resources with a single module
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/jest/__mocks__/fileMock.js',
-    '\\.(css|scss)$': '<rootDir>/jest/__mocks__/styleMock.js',
+      '<rootDir>/__mocks__/fileMock.js',
+    '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.js',
   },
 
   // The path to a module that runs some code to configure or set up the testing framework before each test
