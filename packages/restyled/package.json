@@ -30,13 +30,13 @@
     "@fortawesome/pro-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "invariant": "^2.2.4",
-    "polished": "^3.3.2",
+    "polished": "^3.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-spring": "^9.0.0-beta.8",
-    "styled-components": "^4.2.0",
+    "styled-components": "^4.2.1",
     "styled-map": "^3.3.0",
-    "styled-system": "^4.2.2",
+    "styled-system": "^5.0.5",
     "styled-theming": "^2.2.0",
     "typography": "^0.16.19"
   }
