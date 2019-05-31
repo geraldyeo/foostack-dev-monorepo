@@ -68,7 +68,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "@babel/runtime": "^7.4.5",
     "@babel/types": "^7.4.4",
-    "@commitlint/cli": "^7.6.1",
+    "@commitlint/cli": "^8.0.0",
     "@commitlint/config-lerna-scopes": "^7.6.0",
     "@commitlint/prompt-cli": "^7.6.1",
     "@types/invariant": "^2.2.29",
