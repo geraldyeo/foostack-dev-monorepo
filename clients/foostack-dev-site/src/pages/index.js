@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Button } from '@foostack-dev/restyled';
+import { Button, Heading, Text } from '@foostack-dev/restyled';
 
-import Layout from '../components/layout';
+import Layout from '../layouts/default';
 import Image from '../components/image';
 import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Heading as="h3">Hi people</Heading>
+    <Text>Welcome to your new Gatsby site.</Text>
+    <Text>Now go build something great.</Text>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
