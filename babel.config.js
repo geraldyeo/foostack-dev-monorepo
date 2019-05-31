@@ -26,6 +26,7 @@ module.exports = {
     '@babel/plugin-proposal-json-strings',
     //
     'babel-plugin-dev-expression',
+    'macros',
   ],
   overrides: [
     {
