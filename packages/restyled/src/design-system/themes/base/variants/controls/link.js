@@ -5,18 +5,18 @@ import { themed } from '@foostack-dev/core';
 const colorsStyles = theming.variants('variant', 'variation', {
   primary: {
     light: css`
-      color: ${themed('colors.accents.light.2')};
+      color: ${themed('colors.accents.light')};
     `,
     dark: css`
-      color: ${themed('colors.accents.dark.2')};
+      color: ${themed('colors.accents.dark')};
     `,
   },
   body: {
     light: css`
-      color: ${themed('colors.neutrals.light.3')};
+      color: ${themed('colors.shades.light')};
     `,
     dark: css`
-      color: ${themed('colors.neutrals.dark.1')};
+      color: ${themed('colors.shades.dark')};
     `,
   },
 });

@@ -38,11 +38,11 @@ Button.propTypes = {
 
 Button.defaultProps = {
   as: 'button',
-  bg: 'blue',
+  bg: '#999999',
   border: 0,
   borderRadius: 2,
   color: 'white',
-  fontFamily: 'montserrat',
+  fontFamily: 'firaSans',
   fontSize: 'inherit',
   fontWeight: 'regular',
   m: 0,

@@ -1,6 +1,5 @@
 import { DesignSystem, generateMediaQuery, ms } from '@foostack-dev/core';
 import { css } from 'styled-components';
-import { getDarkenedColor, getLightenedColor, getColors } from '../../../utils/colors';
 import * as styledVariants from './variants';
 
 const breakpoints = {
@@ -45,36 +44,25 @@ const breakpoints = {
  */
 const { between, greaterThan, lessThan } = generateMediaQuery(breakpoints, css);
 
-const accents = {
-  light: ['#007fef', '#6669e6', '#b747c2', '#e1148c', '#eb034f', '#d93d04'],
-  dark: ['#2f4858', '#394e79', '#6b498a', '#a6357e', '#d01c52', '#d93d04'],
-};
-
-const neutrals = {
-  light: ['#f6f6f6', '#e6e6e6', '#d6d6d6', '#c6c6c6', '#b6b6b6'],
-  dark: ['#565656', '#464646', '#363636', '#262626', '#161616'],
-};
-
-const texts = {
-  light: ['#2f333a', '#4b5056', '#696e76', '#898e95', '#aaafB7'],
-  dark: ['#5d6167', '#787d84', '#979ca3', '#b7bbC3', '#d7dce4'],
-};
-
 const token = {
   breakpoints: Object.values(breakpoints),
   colors: {
-    accents,
-    accentsLightened: getColors(accents, getLightenedColor),
-    accentsDarkened: getColors(accents, getDarkenedColor),
-    neutrals,
-    texts,
+    brand: '#d93d04',
+    accents: { light: '#8793aa', dark: '#bb3d51' },
+    shades: { light: '#f3f8f3', dark: '#1e141e' },
+    texts: { light: '#a6a6a6', dark: '#363636' },
+    primary: '#e2431f',
+    info: '#1e141e',
+    success: '#798f41',
+    warning: '#f67e09',
+    danger: '#f44336',
   },
   fonts: {
     system:
       'system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+    firaSans: '"Fira Sans", sans-serif;',
     merriweather: '"Merriweather", serif',
-    montserrat: '"Montserrat", san-serif',
-    robotomono: '"Roboto Mono", monospace',
+    robotoMono: '"Roboto Mono", monospace',
   },
   // @see {@link https://type-scale.com/}
   fontSizes: new Array(12).fill(0).map((_, i) => ms(i - 2, 'major third') * 16),
