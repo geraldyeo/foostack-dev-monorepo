@@ -47,34 +47,9 @@ module.exports = {
         },
       },
     },
-    // {
-    //   test: './clients/foostack-dev-site',
-    //   presets: ['@babel/preset-react'],
-    //   plugins: [
-    //     '@babel/plugin-transform-async-to-generator',
-    //     '@babel/plugin-transform-runtime',
-    //     ['babel-plugin-styled-components', { displayName: false }],
-    //     'add-module-exports',
-    //   ],
-    //   env: {
-    //     development: {
-    //       plugins: ['flow-react-proptypes'],
-    //     },
-    //     production: {
-    //       plugins: [
-    //         '@babel/plugin-transform-react-inline-elements',
-    //         [
-    //           'transform-imports',
-    //           { lodash: { transform: 'lodash/${member}', preventFullImport: true } },
-    //         ],
-    //         'lodash',
-    //       ],
-    //     },
-    //     test: {
-    //       presets: [['@babel/preset-env', { modules: 'commonjs', debug: false }]],
-    //       plugins: ['@babel/plugin-transform-flow-strip-types', 'dynamic-import-node'],
-    //     },
-    //   },
-    // },
+    {
+      test: './clients/foostack-dev-site',
+      plugins: ['babel-plugin-idx'],
+    },
   ],
 };

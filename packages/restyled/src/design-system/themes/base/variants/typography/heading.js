@@ -5,10 +5,10 @@ import { themed, txPx } from '@foostack-dev/core';
 const colorsStyles = theming.variants('variant', 'variation', {
   primary: {
     light: css`
-      color: ${themed('colors.accentsDarkened.light.0')};
+      color: ${themed('colors.shades.dark')};
     `,
     dark: css`
-      color: ${themed('colors.accentsLightened.dark.0')};
+      color: ${themed('colors.shades.light')};
     `,
   },
 });

@@ -13,6 +13,8 @@ async function getAllBlogPost(createPage, graphql) {
         edges {
           node {
             id
+            slug
+            unsplashPhotoId
           }
         }
       }
@@ -22,13 +24,18 @@ async function getAllBlogPost(createPage, graphql) {
   const allBlogPostsResult = await graphql(query);
   const allBlogPostEdges = get(allBlogPostsResult, 'data.allContentfulBlogPost.edges', []);
   allBlogPostEdges.forEach(edge => {
+    const {
+      node: { id, slug, unsplashPhotoId },
+    } = edge;
+    // programatically create blog articles with slug
     createPage({
-      path: `/articles/${edge.node.id}`,
+      path: `/articles/${slug}`,
       component: blogArticleTemplate,
       // The context is passed as props to the component as well
       // as into the component's GraphQL query.
       context: {
-        id: edge.node.id,
+        id,
+        unsplashPhotoId,
       },
     });
   });

@@ -26,6 +26,13 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
+    {
+      resolve: `gatsby-source-unsplash`,
+      options: {
+        appId: process.env.UNSPLASH_ACCESS_TOKEN,
+        collections: (process.env.UNSPLASH_COLLECTIONS || '').split(','),
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
