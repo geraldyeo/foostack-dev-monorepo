@@ -9,7 +9,6 @@ module.exports = {
     author: `@geraldyeo`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,8 +25,13 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-unsplash`,
+      options: {
+        appId: process.env.UNSPLASH_ACCESS_TOKEN,
+        collections: (process.env.UNSPLASH_COLLECTIONS || '').split(','),
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,6 +50,10 @@ module.exports = {
         displayName: false,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-remove-trailing-slashes`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

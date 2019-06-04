@@ -1,26 +1,27 @@
 import { css } from 'styled-components';
 import theming from 'styled-theming';
 import { themed } from '@foostack-dev/core';
+import { getDarkenedColor, getLightenedColor } from '../../../../../utils/colors';
 
 const colorsStyles = theming.variants('variant', 'variation', {
   primary: {
     light: css`
-      background-color: ${themed('colors.accentsDarkened.light.1')};
-      color: ${themed('colors.neutrals.light.0')};
+      background-color: ${themed('colors.primary')};
+      color: ${themed('colors.shades.light')};
       :not(:disabled) {
         :focus,
         :hover {
-          background-color: ${themed('colors.accents.light.1')};
+          background-color: ${props => getLightenedColor(themed('colors.primary')(props))};
         }
       }
     `,
     dark: css`
-      background-color: ${themed('colors.accentsDarkened.dark.1')};
-      color: ${themed('colors.neutrals.dark.0')};
+      background-color: ${props => getDarkenedColor(themed('colors.primary')(props))};
+      color: ${themed('colors.shades.light')};
       :not(:disabled) {
         :focus,
         :hover {
-          background-color: ${themed('colors.accents.dark.1')};
+          background-color: ${themed('colors.primary')};
         }
       }
     `,

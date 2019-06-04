@@ -16,9 +16,9 @@ Heading.defaultProps = {
   ...Text.defaultProps,
   as: 'h2',
   m: 0,
-  fontFamily: 'montserrat',
+  fontFamily: 'firaSans',
   fontSize: 4,
-  fontWeight: 'black',
+  fontWeight: 'bold',
   variation: 'default',
 };
 
