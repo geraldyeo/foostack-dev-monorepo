@@ -19,7 +19,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "start": "yarn run build && yarn run serve"
+    "start": "yarn run build && yarn run serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@foostack-dev/restyled": "^0.0.0",
@@ -41,6 +43,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.2.1"
-  }
+    "styled-components": "^4.2.1",
+    "snyk": "^1.171.1"
+  },
+  "snyk": true
 }
