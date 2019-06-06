@@ -23,10 +23,12 @@
   },
   "dependencies": {
     "@foostack-dev/restyled": "^0.0.0",
+    "@styled-system/css": "^5.0.5",
+    "@styled-system/prop-types": "^5.0.5",
     "babel-plugin-idx": "^2.4.0",
     "babel-plugin-styled-components": "^1.10.0",
     "dotenv": "^8.0.0",
-    "gatsby": "^2.8.2",
+    "gatsby": "^2.8.6",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.1",
@@ -44,6 +46,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.2.1"
+    "styled-components": "^4.3.1"
   }
 }
