@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { themed } from '@foostack-dev/core';
 import { Text } from '../typography/text';
 
-export const Link = styled(Text)`
-  ${themed('styledVariants.Link')}
-`;
+export const Link = styled(Text)({}, themed('styledVariants.Link'));
 
 Link.propTypes = {
   ...Text.propTypes,
