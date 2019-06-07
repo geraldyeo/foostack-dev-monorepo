@@ -1,14 +1,9 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { borders, borderColor } from 'styled-system';
 import { themed } from '@foostack-dev/core';
 import { Text } from './text';
 
-export const Quote = styled(Text)`
-  ${borders}
-  ${borderColor}
-  ${themed('styledVariants.Quote')}
-`;
+export const Quote = styled(Text)({}, themed('styledVariants.Quote'));
 
 Quote.propTypes = {
   ...Text.propTypes,
