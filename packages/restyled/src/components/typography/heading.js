@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { themed } from '@foostack-dev/core';
 import { Text } from './text';
 
-export const Heading = styled(Text)`
-  ${themed('styledVariants.Heading')}
-`;
+export const Heading = styled(Text)({}, themed('styledVariants.Heading'));
 
 Heading.propTypes = {
   ...Text.propTypes,
