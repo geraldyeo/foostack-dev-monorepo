@@ -1,37 +1,15 @@
 import styled from 'styled-components';
-import {
-  gridAutoColumns,
-  gridAutoRows,
-  gridGap,
-  gridTemplateAreas,
-  gridTemplateRows,
-  gridTemplateColumns,
-  gridArea,
-} from 'styled-system';
+import grid from '@styled-system/grid';
+import propTypes from '@styled-system/prop-types';
 import { Box } from './box';
 
-export const Grid = styled(Box)`
-    display: grid;
-    ${gridArea}
-    ${gridAutoColumns}
-    ${gridAutoRows}
-    ${gridGap}
-    ${gridTemplateAreas}
-    ${gridTemplateColumns}
-    ${gridTemplateRows}
-`;
+export const Grid = styled(Box)({ display: 'grid' }, grid);
 
 Grid.displayName = 'Restyled.Grid';
 
 Grid.propTypes = {
   ...Box.propTypes,
-  ...gridArea.propTypes,
-  ...gridAutoColumns.propTypes,
-  ...gridAutoRows.propTypes,
-  ...gridGap.propTypes,
-  ...gridTemplateAreas.propTypes,
-  ...gridTemplateColumns.propTypes,
-  ...gridTemplateRows.propTypes,
+  ...propTypes.grid,
 };
 
 export default Grid;

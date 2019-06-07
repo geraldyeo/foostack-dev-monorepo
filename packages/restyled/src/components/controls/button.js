@@ -1,38 +1,21 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { themed } from '@foostack-dev/core';
-import {
-  borderColor,
-  borderRadius,
-  borders,
-  buttonStyle,
-  fontFamily,
-  fontWeight,
-} from 'styled-system';
 import { Box } from '../layouts/box';
 
-export const Button = styled(Box)`
-  appearance: none;
-  display: inline-block;
-  line-height: inherit;
-  text-align: center;
-  text-decoration: none;
-  ${borderColor}
-  ${borderRadius}
-  ${borders}
-  ${buttonStyle}
-  ${fontFamily}
-  ${fontWeight}
-  ${themed('styledVariants.Button')}
-`;
+export const Button = styled(Box)(
+  {
+    appearance: 'none',
+    display: 'inline-block',
+    lineHeight: 'inherit',
+    textAlign: 'center',
+    textDecoration: 'none',
+  },
+  themed('styledVariants.Button'),
+);
 
 Button.propTypes = {
-  ...borderColor.propTypes,
-  ...borderRadius.propTypes,
-  ...borders.propTypes,
-  ...buttonStyle.propTypes,
-  ...fontFamily.propTypes,
-  ...fontWeight.propTypes,
+  ...Box.propTypes,
   variation: PropTypes.oneOf(['default', 'primary', 'success', 'warning']),
 };
 
