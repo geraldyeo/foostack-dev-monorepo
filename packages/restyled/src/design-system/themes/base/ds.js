@@ -75,6 +75,13 @@ const token = {
   lineHeights: new Array(6).fill(0).map((_, i) => ms(i + 1, 'perfect fourth')),
   media: { between, greaterThan, lessThan },
   radii: [0, 2, 4, 6],
+  shadows: {
+    light: '0 5px 10px rgba(154, 160, 185, .05)',
+    medium: '0 15px 40px rgba(166, 173, 201, .2)',
+    get blended() {
+      return `${this.light}, ${this.medium}`;
+    },
+  },
   space: new Array(11)
     .fill(0)
     .map((_, i) => i * 8)
