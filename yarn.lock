@@ -3365,9 +3365,9 @@
     object-assign "^4.1.1"
 
 "@styled-system/css@^5.0.9":
-  version "5.0.9"
-  resolved "https://registry.npmjs.org/@styled-system/css/-/css-5.0.9.tgz#cd4e7985be47bcb1799d426fcabc85a5ad15d8e5"
-  integrity sha512-2JMBSsKDSRX+X8V42g8Bl+8SY7Gr4msyhfT6sXglmZJQ4kQ3FXGn+c8Bn9DQCn7yFOjjbf+WkvxJN54yJr88pA==
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@styled-system/css/-/css-5.0.10.tgz#c5f59d6752a59a53e49cbce00d85a98fbe7d157b"
+  integrity sha512-SssUqE73GcZ/0rBtiuvi7WFAQNHmLslKxQ0Jxbqo2rtfLPFCbyBPJLLogI+UxCNSbh4k5ntCODSw3ufEyFl4aw==
 
 "@styled-system/flexbox@^5.0.5":
   version "5.0.5"
