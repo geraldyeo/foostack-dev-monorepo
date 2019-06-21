@@ -47,9 +47,5 @@ module.exports = {
         },
       },
     },
-    {
-      test: './clients/foostack-dev-site',
-      plugins: ['babel-plugin-idx'],
-    },
   ],
 };

@@ -16,7 +16,7 @@
   },
   "scripts": {
     "prebuild": "rimraf ./lib",
-    "build": "babel --root-mode upward src --out-dir lib --ignore \"src/**/*.stories.js\",\"src/**/*.spec.js\",\"src/**/*.test.js\"",
+    "build": "babel --root-mode upward src --out-dir lib --ignore \"src/**/__tests__/*.*\"",
     "develop": "yarn run build --watch"
   },
   "dependencies": {
