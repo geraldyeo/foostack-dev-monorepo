@@ -1,7 +1,7 @@
 {
   "name": "@foostack-dev/storybooks",
   "version": "0.0.0",
-  "description": "Playground - Storybooks",
+  "description": "Testing grounds - Storybooks",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

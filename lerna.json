@@ -15,7 +15,7 @@
   "packages": [
     "clients/*",
     "packages/*",
-    "playgrounds/*",
+    "testinggrounds/*",
     "servers/*"
   ],
   "useWorkspaces": true,

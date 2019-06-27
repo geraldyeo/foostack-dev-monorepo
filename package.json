@@ -15,7 +15,7 @@
   "workspaces": [
     "clients/*",
     "packages/*",
-    "playgrounds/*",
+    "testinggrounds/*",
     "servers/*"
   ],
   "scripts": {
