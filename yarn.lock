@@ -1309,24 +1309,17 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@7.4.3", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2":
+"@babel/runtime@7.4.3":
   version "7.4.3"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.4.3.tgz#79888e452034223ad9609187a0ad1fe0d2ad4bdc"
   integrity sha512-9lsJwJLxDh/T3Q3SZszfWOTkk3pHbkmH+3KY+zwIDmsNlxsumuhS2TH3NIpktU4kNvfzy+k3eLT7aTJSPTo0OA==
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@7.4.5", "@babel/runtime@^7.4.5":
+"@babel/runtime@7.4.5", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5":
   version "7.4.5"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
   integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
-"@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4":
-  version "7.4.4"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
-  integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -9836,10 +9829,10 @@ gatsby-react-router-scroll@^2.1.0:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@2.1.3:
-  version "2.1.3"
-  resolved "https://registry.npmjs.org/gatsby-source-contentful/-/gatsby-source-contentful-2.1.3.tgz#b6d08b231e2ad8751f846764004327cbf1802144"
-  integrity sha512-aBCBhP7QcdF6OW2BJ1Eq6NxiM5GDmWA8i5VFV79nc9TNPS2fYrkuLsz/ab2537R31jkEW34zLExr3D+O6NQKPg==
+gatsby-source-contentful@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.4.tgz#3c26731b61b42176ea81078afb1121a54d3c2d32"
+  integrity sha512-XBKVNcc1q6czwR0xNYzBSJfx3pgS2YKy2FUWskHK+fecySndlQlAlKvbZOKRV0cYkYnLUQBzm+jjvTWFc/R9iA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@hapi/joi" "^14.0.0"
