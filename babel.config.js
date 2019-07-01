@@ -30,11 +30,11 @@ module.exports = {
   ],
   overrides: [
     {
-      test: './packages/core',
+      test: './corelibs/core',
       presets: ['@babel/preset-env', '@babel/typescript'],
     },
     {
-      test: './packages/restyled',
+      test: './corelibs/restyled',
       presets: ['@babel/preset-react'],
       plugins: [
         '@babel/plugin-transform-runtime',

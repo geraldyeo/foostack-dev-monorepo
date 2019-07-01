@@ -14,8 +14,8 @@
   "npmClient": "yarn",
   "packages": [
     "clients/*",
-    "packages/*",
-    "testinggrounds/*",
+    "corelibs/*",
+    "sandboxes/*",
     "servers/*"
   ],
   "useWorkspaces": true,
