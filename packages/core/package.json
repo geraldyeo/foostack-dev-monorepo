@@ -11,8 +11,8 @@
   "license": "MIT",
   "private": true,
   "engines": {
-    "node": ">=10.0.0",
-    "yarn": ">= 1.13.0"
+    "node": ">=10.15.0",
+    "yarn": ">=1.16.0"
   },
   "scripts": {
     "prebuild": "rimraf ./lib",
@@ -24,9 +24,9 @@
     "develop:js": "yarn run build --watch"
   },
   "dependencies": {
-    "invariant": "^2.2.4",
-    "lodash.get": "^4.4.2",
-    "lodash.identity": "^3.0.0",
-    "lodash.isnumber": "^3.0.3"
+    "invariant": "2.2.4",
+    "lodash.get": "4.4.2",
+    "lodash.identity": "3.0.0",
+    "lodash.isnumber": "3.0.3"
   }
 }
