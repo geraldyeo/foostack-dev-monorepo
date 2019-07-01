@@ -46,6 +46,10 @@ describe('Media Query', () => {
       mq = generateMediaQuery(defaultBreakpoints, css);
     });
 
+    afterEach(() => {
+      css.mockReset();
+    });
+
     it('should generate @media styles for lessThan', () => {
       const { lessThan } = mq;
       lessThan('medium')({ color: '#fff' });

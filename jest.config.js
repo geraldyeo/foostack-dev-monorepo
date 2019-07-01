@@ -24,13 +24,13 @@ module.exports = {
     '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.js',
   },
 
+  projects: ['<rootDir>/corelibs/*'],
+
   // The path to a module that runs some code to configure or set up the testing framework before each test
   setupFilesAfterEnv: ['<rootDir>/jest/setup.js'],
 
-  testPathIgnorePatterns: ['/node_modules/', '/.cache/'],
-
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: ['/node_modules/', '/cytests/'],
+  testPathIgnorePatterns: ['/node_modules/', '/cypress/'],
 
   // This option allows use of a custom test runner
   testRunner: 'jest-circus/runner',
