@@ -28,7 +28,7 @@
     "babel-plugin-idx": "2.4.0",
     "babel-plugin-styled-components": "1.10.4",
     "dotenv": "8.0.0",
-    "gatsby": "2.11.6",
+    "gatsby": "2.11.7",
     "gatsby-image": "2.2.3",
     "gatsby-plugin-manifest": "2.2.0",
     "gatsby-plugin-offline": "2.2.0",
