@@ -120,6 +120,6 @@
     "react-testing-library": "8.0.1",
     "rimraf": "2.6.3",
     "typescript": "3.5.3",
-    "wait-on": "3.2.0"
+    "wait-on": "3.3.0"
   }
 }
