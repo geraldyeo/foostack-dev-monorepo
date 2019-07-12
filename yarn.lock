@@ -9536,7 +9536,7 @@ gatsby-plugin-remove-trailing-slashes@2.1.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sharp@2.2.4, gatsby-plugin-sharp@^2.2.4:
+gatsby-plugin-sharp@2.2.4:
   version "2.2.4"
   resolved "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.4.tgz#b4d7210d5e3b77c8f4a1858ce838e332f476c65a"
   integrity sha512-+1TQlcfCqz0ni+ng/1bb30IX5PzWF0STwtSB4oeqYkpEbqJiG6U+KDbpIrpWHXH7VsjQcNS/32YNjTHn0b+s5g==
@@ -9545,6 +9545,29 @@ gatsby-plugin-sharp@2.2.4, gatsby-plugin-sharp@^2.2.4:
     async "^2.1.2"
     bluebird "^3.5.0"
     fs-extra "^7.0.0"
+    imagemin "^6.0.0"
+    imagemin-mozjpeg "^8.0.0"
+    imagemin-pngquant "^6.0.0"
+    imagemin-webp "^5.0.0"
+    lodash "^4.17.10"
+    mini-svg-data-uri "^1.0.0"
+    potrace "^2.1.1"
+    probe-image-size "^4.0.0"
+    progress "^2.0.3"
+    semver "^5.6.0"
+    sharp "^0.22.1"
+    svgo "^1.2.0"
+
+gatsby-plugin-sharp@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.6.tgz#acb954b0c6b1a3372a243e5a46b4301b375a6043"
+  integrity sha512-leD2ooffd96ENiVQmxHxSjXwEgEIgB9+VHGWugBIrbD+qAPEovnr1132Xmw3NUvRYkxCXsnOoCxAslrzh9VsNQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    async "^2.1.2"
+    bluebird "^3.5.0"
+    fs-extra "^7.0.0"
+    got "^8.3.2"
     imagemin "^6.0.0"
     imagemin-mozjpeg "^8.0.0"
     imagemin-pngquant "^6.0.0"
@@ -9574,10 +9597,10 @@ gatsby-react-router-scroll@^2.1.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-contentful@2.1.10:
-  version "2.1.10"
-  resolved "https://registry.npmjs.org/gatsby-source-contentful/-/gatsby-source-contentful-2.1.10.tgz#cdf9ec7a845715d4037cce2d2a18fada940486df"
-  integrity sha512-CF07flZn4ZsltOY6Il9gcFRqECXoB4xqWLzCac7PewGnqR/cHZu/n3XQMxkZHMczLtMQ8SO0NmwVxlexcOtE6Q==
+gatsby-source-contentful@2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.12.tgz#677160828fa86d360068c257b9cd4f2cbdb10ed0"
+  integrity sha512-+cGjLvOL+UI8+3gWFeZHh1LEzvUhD+JpCOSMDWVnpZqe04V5U6+TJFKkdQqtUJWJK4iUcLvY/tn/RtT94grn+g==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@hapi/joi" "^15.0.0"
@@ -9588,17 +9611,37 @@ gatsby-source-contentful@2.1.10:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.2.4"
-    gatsby-source-filesystem "^2.1.4"
+    gatsby-plugin-sharp "^2.2.6"
+    gatsby-source-filesystem "^2.1.5"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.10"
     qs "^6.4.0"
 
-gatsby-source-filesystem@2.1.4, gatsby-source-filesystem@^2.1.4:
+gatsby-source-filesystem@2.1.4:
   version "2.1.4"
   resolved "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.4.tgz#b1e9475c8c74dfc416f3aef134c78195bf4f89bf"
   integrity sha512-6RvOWS1AktmyUSay3hcND5YlPQUWXhdg2HBbhzZm1wdvuEJyHF3KmxBfOjQXhadoRx+ZAAseVaUwg2504UyuhA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    better-queue "^3.8.7"
+    bluebird "^3.5.0"
+    chokidar "2.1.2"
+    file-type "^10.2.0"
+    fs-extra "^5.0.0"
+    got "^7.1.0"
+    md5-file "^3.1.1"
+    mime "^2.2.0"
+    pretty-bytes "^4.0.2"
+    progress "^2.0.3"
+    read-chunk "^3.0.0"
+    valid-url "^1.0.9"
+    xstate "^3.1.0"
+
+gatsby-source-filesystem@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.5.tgz#2d5afe0fdfe95fbc6d0ec40498dbc201c25f5a72"
+  integrity sha512-8YSuRsn14YllCv8egkGwCFMoF84lGhKmwFXrpzaJS0OELA8WaHaHjfo5olB1xd5IE4na8il8c6MCj/btlQlkuQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
@@ -10168,7 +10211,7 @@ got@^7.0.0, got@^7.1.0:
     url-parse-lax "^1.0.0"
     url-to-options "^1.0.1"
 
-got@^8.0.0, got@^8.3.1:
+got@^8.0.0, got@^8.3.1, got@^8.3.2:
   version "8.3.2"
   resolved "https://registry.npmjs.org/got/-/got-8.3.2.tgz#1d23f64390e97f776cac52e5b936e5f514d2e937"
   integrity sha512-qjUJ5U/hawxosMryILofZCkm3C84PLJS/0grRIpjAwu+Lkxxj5cxeCU25BG0/3mDSpXKTyZr8oh8wIgLaH0QCw==
