@@ -40,7 +40,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: *working_directory
-      - run: yarn run test:coverage
+      - run: yarn run test-coverage
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -53,7 +53,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: *working_directory
-      - run: yarn run test:codacy-coverage
+      - run: yarn run codacy-coverage
 
 workflows:
   version: 2

@@ -1,0 +1,73 @@
+{
+  "name": "@foostack-dev/client-gatsby-site",
+  "version": "0.0.0",
+  "description": "Client - foostack.dev gatsby site",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"
+  },
+  "author": "Gerald Yeo <gerald.yeo@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=10.15.0",
+    "yarn": ">=1.16.0"
+  },
+  "scripts": {
+    "prebuild": "gatsby clean",
+    "build": "gatsby build",
+    "develop": "gatsby develop -o",
+    "serve": "gatsby serve",
+    "start": "yarn run build && yarn run serve",
+    "lint": "eslint .",
+    "test": "jest --passWithNoTests",
+    "test-coverage": "yarn run test --coverage"
+  },
+  "dependencies": {
+    "@foostack-dev/core-uikit": "0.0.0",
+    "@styled-system/css": "5.0.13",
+    "@styled-system/prop-types": "5.0.12",
+    "dotenv": "8.0.0",
+    "gatsby": "2.13.15",
+    "gatsby-image": "2.2.5",
+    "gatsby-plugin-manifest": "2.2.2",
+    "gatsby-plugin-offline": "2.2.2",
+    "gatsby-plugin-react-helmet": "3.1.1",
+    "gatsby-plugin-remove-trailing-slashes": "2.1.1",
+    "gatsby-plugin-sharp": "2.2.4",
+    "gatsby-plugin-styled-components": "3.1.1",
+    "gatsby-source-contentful": "2.1.10",
+    "gatsby-source-filesystem": "2.1.4",
+    "gatsby-source-unsplash": "1.0.2",
+    "gatsby-transformer-sharp": "2.2.2",
+    "idx": "2.5.6",
+    "lodash": "4.17.14",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-helmet": "5.2.1",
+    "styled-components": "4.3.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "7.2.0",
+    "babel-eslint": "10.0.2",
+    "babel-plugin-idx": "2.4.0",
+    "babel-plugin-styled-components": "1.10.6",
+    "eslint": "6.0.1",
+    "eslint-config-react-app": "4.0.1",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jest": "22.7.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-node": "9.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.14.2",
+    "eslint-plugin-react-hooks": "1.6.1",
+    "jest": "24.8.0",
+    "prettier": "1.18.2"
+  },
+  "jest": {
+    "coverageDirectory": "../../coverage"
+  }
+}

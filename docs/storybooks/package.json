@@ -1,0 +1,40 @@
+{
+  "name": "@foostack-dev/storybooks",
+  "version": "0.0.0",
+  "description": "Docs - Storybooks",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"
+  },
+  "author": "Gerald Yeo <gerald.yeo@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=10.15.0",
+    "yarn": ">=1.16.0"
+  },
+  "scripts": {
+    "develop": "yarn run develop:uikit",
+    "develop:uikit": "start-storybook -p 9091 -c .storybook-uikit",
+    "build": "yarn run build:uikit",
+    "build:uikit": "build-storybook -c .storybook-uikit -o .out-uikit"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "@foostack-dev/core-uikit": "0.0.0",
+    "@storybook/addon-actions": "5.1.9",
+    "@storybook/addon-backgrounds": "5.1.9",
+    "@storybook/addon-info": "5.1.9",
+    "@storybook/addon-knobs": "5.1.9",
+    "@storybook/addon-links": "5.1.9",
+    "@storybook/addon-notes": "5.1.9",
+    "@storybook/addon-viewport": "5.1.9",
+    "@storybook/react": "5.1.9",
+    "babel-loader": "8.0.6",
+    "storybook-addon-smart-knobs": "4.1.2",
+    "storybook-react-router": "1.0.5"
+  }
+}
