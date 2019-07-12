@@ -1,7 +1,7 @@
 /* eslint-disable no-template-curly-in-string */
 // Project-wide babel config file for the monorepo
-// babel configs for other packages are overridden with babel's `overrides` option
 module.exports = {
+  babelrcRoots: ['.', 'docs/*', 'packages/*'],
   presets: ['@babel/preset-env'],
   plugins: [
     // Stage 0
@@ -27,25 +27,5 @@ module.exports = {
     //
     'babel-plugin-dev-expression',
     'macros',
-  ],
-  overrides: [
-    {
-      test: './corelibs/core',
-      presets: ['@babel/preset-env', '@babel/typescript'],
-    },
-    {
-      test: './corelibs/restyled',
-      presets: ['@babel/preset-react'],
-      plugins: [
-        '@babel/plugin-transform-runtime',
-        ['babel-plugin-styled-components', { displayName: false }],
-        'lodash',
-      ],
-      env: {
-        production: {
-          plugins: ['transform-react-remove-prop-types'],
-        },
-      },
-    },
   ],
 };

@@ -1,32 +1,12 @@
 module.exports = {
-  extends: [
-    'react-app',
-    'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:jest/recommended',
-    'prettier',
-    'prettier/react',
-  ],
-  plugins: ['prettier', 'jest'],
-  rules: {
-    // react
-    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
-    // prettier
-    'prettier/prettier': [
-      'warn',
-      {
-        bracketSpacing: true,
-        jsxBracketSameLine: false,
-        printWidth: 100,
-        semi: true,
-        singleQuote: true,
-        tabWidth: 2,
-        trailingComma: 'all',
-        useTabs: false,
-      },
-    ],
+  env: {
+    browser: true,
+    node: true,
+  },
+  extends: ['plugin:prettier/recommended'],
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
 };
