@@ -63,7 +63,7 @@
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
     "@babel/preset-env": "7.5.4",
-    "@commitlint/cli": "8.0.0",
+    "@commitlint/cli": "8.1.0",
     "@commitlint/config-lerna-scopes": "8.0.0",
     "@commitlint/prompt-cli": "8.0.0",
     "@testing-library/jest-dom": "4.0.0",
