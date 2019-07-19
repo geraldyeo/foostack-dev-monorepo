@@ -25,7 +25,7 @@
     "release-dryrun": "yarn run release --no-git-tag-version --no-push",
     "build": "yarn run build-packages && yarn run build-gatsby",
     "build-docs": "yarn run build-packages && yarn run build-storybooks",
-    "build-packages": "lerna run build --parallel --scope \"@foostack-dev/{core-uikit,core-utils}\"",
+    "build-packages": "lerna run build --stream --scope \"@foostack-dev/{core-uikit,core-utils}\"",
     "build-gatsby": "lerna run build --stream --scope \"@foostack-dev/client-gatsby-site\"",
     "build-storybooks": "lerna run build --stream --scope \"@foostack-dev/storybooks\"",
     "dev": "concurrently -k -r \"yarn:dev-packages\" \"yarn:dev-gatsby\"",

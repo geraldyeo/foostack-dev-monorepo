@@ -1,6 +1,7 @@
 {
   "presets": ["@babel/env", "@babel/preset-react"],
   "plugins": [
+    "@babel/plugin-external-helpers",
     "@babel/plugin-transform-runtime",
     ["babel-plugin-styled-components", { "displayName": false }],
     "lodash"

@@ -2,7 +2,8 @@
   "name": "@foostack-dev/core-utils",
   "version": "0.0.0",
   "description": "Core-utils module",
-  "main": "lib/index.js",
+  "main": "lib/utils.js",
+  "module": "lib/utils.mjs",
   "repository": {
     "type": "git",
     "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"
@@ -18,9 +19,10 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "yarn run type-check --watch",
     "prebuild": "rimraf ./lib",
-    "build": "yarn run build:types && yarn run build:js",
+    "build": "yarn run build:types && yarn run build:babel && yarn run build:rollup",
+    "build:babel": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "build:rollup": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "lint": "eslint --cache --cache-location \"../../node_modules/.eslintcache/\" .",
     "test": "jest --passWithNoTests",
     "test-coverage": "yarn run test --coverage"
@@ -50,6 +52,15 @@
     "jest": "24.8.0",
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
+    "rollup": "1.17.0",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "10.0.1",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-peer-deps-external": "2.2.0",
+    "rollup-plugin-replace": "2.2.0",
+    "rollup-plugin-typescript": "1.0.1",
+    "rollup-plugin-url": "2.2.2",
+    "tslib": "1.10.0",
     "typescript": "3.5.3"
   },
   "jest": {
