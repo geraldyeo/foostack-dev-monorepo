@@ -2,7 +2,6 @@
   "name": "@foostack-dev/client-gatsby-site",
   "version": "0.0.0",
   "description": "Client - foostack.dev gatsby site",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"

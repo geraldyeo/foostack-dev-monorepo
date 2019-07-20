@@ -2,7 +2,8 @@
   "name": "@foostack-dev/core-utils",
   "version": "0.0.0",
   "description": "Core-utils module",
-  "main": "lib/index.js",
+  "main": "lib/index.common.js",
+  "module": "lib/index.esm.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"
@@ -13,6 +14,9 @@
   "engines": {
     "node": ">=10.15.0",
     "yarn": ">=1.16.0"
+  },
+  "rollup": {
+    "input": "src/index.ts"
   },
   "scripts": {
     "type-check": "tsc --noEmit",

@@ -2,7 +2,8 @@
   "name": "@foostack-dev/core-uikit",
   "version": "0.0.0",
   "description": "Core-uikit module",
-  "main": "lib/index.js",
+  "main": "lib/index.common.js",
+  "module": "lib/index.esm.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"
@@ -13,6 +14,9 @@
   "engines": {
     "node": ">=10.15.0",
     "yarn": ">=1.16.0"
+  },
+  "rollup": {
+    "input": "src/index.js"
   },
   "scripts": {
     "prebuild": "rimraf ./lib",
@@ -35,12 +39,14 @@
     "@styled-system/prop-types": "5.0.15",
     "invariant": "2.2.4",
     "polished": "3.4.1",
+    "styled-system": "5.0.15",
+    "styled-theming": "2.2.0"
+  },
+  "peerDependencies": {
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-spring": "9.0.0-beta.31",
-    "styled-components": "4.3.2",
-    "styled-system": "5.0.15",
-    "styled-theming": "2.2.0"
+    "styled-components": "4.3.2"
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
