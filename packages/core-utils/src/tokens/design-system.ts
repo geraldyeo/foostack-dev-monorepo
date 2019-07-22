@@ -8,8 +8,9 @@ interface Args {
 }
 
 interface ThemedArgs {
-  defaultValue?: string | number;
-  transformValue?(value: string | number): string | number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  defaultValue: any;
+  transformValue?<T>(value: T): T;
 }
 
 /* ========================================
@@ -53,12 +54,12 @@ export class DesignSystem<T extends DesignTokens> {
   private _ds: T;
   private _variant: string;
 
-  public static getValueFromToken(
+  public static getValueFromToken<T, K extends keyof T>(
     token: DesignTokens,
     key: string,
-    defaultValue?: string | number,
-  ): string | number | object | string[] | number[] {
-    const value = get(token, key, defaultValue);
+    defaultValue?: T[K],
+  ): T[K] | undefined {
+    const value: T[K] | undefined = get(token, key, defaultValue);
     if (/styledvariants/i.test(key)) {
       // variants might not exist, this is fine, just return.
       return value;
@@ -67,7 +68,11 @@ export class DesignSystem<T extends DesignTokens> {
     return value;
   }
 
-  public static getColorFromDS(ds: DesignTokens, key: string, variant: string): string {
+  public static getColorFromDS<T, K extends keyof T>(
+    ds: DesignTokens,
+    key: string,
+    variant: string,
+  ): T[K] | undefined {
     const pathSeparator = /[.\[\]]/;
     const hasVariant = new RegExp(variant, 'i');
     const colors = DesignSystem.getValueFromToken(ds, 'colors');
@@ -89,54 +94,54 @@ export class DesignSystem<T extends DesignTokens> {
     this._variant = variant;
   }
 
-  public get(
-    key: string,
-    defaultValue?: string | number,
-  ): string | number | object | string[] | number[] {
+  public get<K extends keyof T>(key: string, defaultValue?: T[K]): T[K] | undefined {
     return DesignSystem.getValueFromToken(this._ds, key, defaultValue);
   }
 
-  public getColor(key: string, variant: string = this.variant): string | object | string[] {
+  public getColor(
+    key: string,
+    variant: string = this.variant,
+  ): string | object | string[] | undefined {
     return DesignSystem.getColorFromDS(this._ds, key, variant);
   }
 
-  public get breakpoints(): string[] {
-    return this.get('breakpoints') as string[];
+  public get breakpoints(): T['breakpoints'] {
+    return this.get('breakpoints');
   }
 
-  public get colors(): Colors {
-    return this.get('colors') as Colors;
+  public get colors(): T['colors'] {
+    return this.get('colors');
   }
 
-  public get fonts(): FontFamilies {
-    return this.get('fonts') as FontFamilies;
+  public get fonts(): T['fonts'] {
+    return this.get('fonts');
   }
 
-  public get fontSizes(): number[] {
-    return this.get('fontSizes') as number[];
+  public get fontSizes(): T['fontSizes'] {
+    return this.get('fontSizes');
   }
 
-  public get fontWeights(): FontWeights {
-    return this.get('fontWeights') as FontWeights;
+  public get fontWeights(): T['fontWeights'] {
+    return this.get('fontWeights');
   }
 
-  public get lineHeights(): number[] {
-    return this.get('lineHeights') as number[];
+  public get lineHeights(): T['lineHeights'] {
+    return this.get('lineHeights');
   }
 
-  public get radii(): number[] {
-    return this.get('radii') as number[];
+  public get radii(): T['radii'] {
+    return this.get('radii');
   }
 
-  public get space(): number[] {
-    return this.get('space') as number[];
+  public get space(): T['space'] {
+    return this.get('space');
   }
 
-  public get variant(): string {
+  public get variant(): T['variant'] {
     return this._variant;
   }
 
-  public set variant(v: string) {
+  public set variant(v: T['variant']) {
     invariant(v, `'variant' value cannot be falsey.`);
     this._variant = v;
   }
@@ -166,14 +171,18 @@ export const parseUnit = (str: string): [number, string] => {
   return [num, (matched && matched[1]) || ''];
 };
 
-export const themed = (
-  key: string,
-  { defaultValue: df, transformValue: tx = identity }: ThemedArgs = {},
-): Function => ({ theme }: { theme?: DesignTokens } = {}): string | number | undefined => {
-  if (theme) {
-    return tx(DesignSystem.getValueFromToken(theme, key, df) as string);
+export const themed = (key: string, opts: ThemedArgs): Function => <
+  T extends DesignTokens,
+  K extends keyof T
+>({ theme }: { theme?: T } = {}): T[K] | undefined => {
+  const { defaultValue, transformValue } = opts || {
+    defaultValue: undefined,
+    transformValue: identity,
+  };
+  if (theme && transformValue) {
+    return transformValue(DesignSystem.getValueFromToken(theme, key, defaultValue));
   }
-  return df;
+  return defaultValue;
 };
 
 export default DesignSystem;
