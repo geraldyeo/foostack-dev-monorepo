@@ -25,7 +25,7 @@
     "build": "yarn run build:types && yarn run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "lint": "eslint --cache --cache-location \"../../node_modules/.eslintcache/\" .",
+    "lint": "eslint --cache --cache-location \"../../node_modules/.eslintcache/\" --ext .js,.ts .",
     "test": "jest --passWithNoTests",
     "test-coverage": "yarn run test --coverage"
   },
