@@ -55,8 +55,5 @@
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
     "typescript": "3.5.3"
-  },
-  "jest": {
-    "coverageDirectory": "../../coverage"
   }
 }

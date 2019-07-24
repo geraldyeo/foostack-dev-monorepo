@@ -51,6 +51,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "7.2.0",
     "babel-eslint": "10.0.2",
+    "babel-jest": "24.8.0",
     "babel-plugin-idx": "2.4.0",
     "babel-plugin-styled-components": "1.10.6",
     "babel-preset-gatsby": "0.2.7",
@@ -66,15 +67,5 @@
     "eslint-plugin-react-hooks": "1.6.1",
     "jest": "24.8.0",
     "prettier": "1.18.2"
-  },
-  "jest": {
-    "coverageDirectory": "../../coverage",
-    "testPathIgnorePatterns": [
-      "node_modules",
-      ".cache"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(gatsby)/)"
-    ]
   }
 }
