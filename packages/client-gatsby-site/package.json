@@ -28,7 +28,7 @@
     "@styled-system/css": "5.0.16",
     "@styled-system/prop-types": "5.0.16",
     "dotenv": "8.0.0",
-    "gatsby": "2.13.38",
+    "gatsby": "2.13.41",
     "gatsby-image": "2.2.6",
     "gatsby-plugin-manifest": "2.2.4",
     "gatsby-plugin-offline": "2.2.4",
