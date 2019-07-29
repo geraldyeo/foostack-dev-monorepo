@@ -1331,17 +1331,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@7.5.5":
+"@babel/runtime@7.5.5", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.4":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.4":
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.4.tgz#cb7d1ad7c6d65676e66b47186577930465b5271b"
-  integrity sha512-Na84uwyImZZc3FKf4aUF1tysApzwf3p2yuFBIyBfbzT5glzKTdvYI4KVW4kcgjrzoGUjC7w3YyCHcJKaRxsr2Q==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -9902,10 +9895,10 @@ gatsby-telemetry@^1.1.7:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby-transformer-sharp@2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.4.tgz#b394a49422227a287f15472397f211b37c17e0f6"
-  integrity sha512-cfFRL5XlHdindUWTlQjWbxjAxVDtMMAazlzDSDYH/Xek0JcWqlqwZpqaO8tCb/ZrVPcYnBQtaY+bXT1/ro0pPQ==
+gatsby-transformer-sharp@2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.5.tgz#ec54982dcff3333a0f6b2a25da4967f5a4241caf"
+  integrity sha512-Onyic4Nfx4874bY6iBIal11zMct2VFU613KRSfiJJPkNCEAEfWje9XiQbI9De3ivIM0Cj8en/eg2vn5QtUeoRg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"

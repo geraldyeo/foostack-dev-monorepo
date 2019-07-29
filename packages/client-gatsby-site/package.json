@@ -39,7 +39,7 @@
     "gatsby-source-contentful": "2.1.15",
     "gatsby-source-filesystem": "2.1.6",
     "gatsby-source-unsplash": "1.0.2",
-    "gatsby-transformer-sharp": "2.2.4",
+    "gatsby-transformer-sharp": "2.2.5",
     "idx": "2.5.6",
     "lodash": "4.17.15",
     "prop-types": "15.7.2",
