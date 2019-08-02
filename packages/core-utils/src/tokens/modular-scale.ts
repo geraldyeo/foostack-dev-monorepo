@@ -25,7 +25,7 @@ const ratios: Ratios = {
   'double octave': 4,
 };
 
-export const ms = (value: number = 0, ratio: string | number = 'golden'): number => {
+export const ms = (value = 0, ratio: string | number = 'golden'): number => {
   let r: number = ratios[ratio];
   if (isNumber(ratio)) {
     r = ratio;

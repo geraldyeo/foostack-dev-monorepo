@@ -139,7 +139,7 @@ describe('DesignSystem', () => {
 
       it('should transform value to px unit', () => {
         const expected = '32px';
-        let value = txPx(32);
+        const value = txPx(32);
         expect(value).toBe(expected);
       });
 

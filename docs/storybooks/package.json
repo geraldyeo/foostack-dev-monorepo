@@ -2,6 +2,7 @@
   "name": "@foostack-dev/storybooks",
   "version": "0.0.0",
   "description": "Docs - Storybooks",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:geraldyeo/foostack-dev-monorepo.git"
@@ -20,19 +21,19 @@
     "build:uikit": "build-storybook -c .storybook-uikit -o .out-uikit"
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   },
   "devDependencies": {
     "@foostack-dev/core-uikit": "0.0.0",
-    "@storybook/addon-actions": "5.1.9",
-    "@storybook/addon-backgrounds": "5.1.9",
-    "@storybook/addon-info": "5.1.9",
-    "@storybook/addon-knobs": "5.1.9",
-    "@storybook/addon-links": "5.1.9",
-    "@storybook/addon-notes": "5.1.9",
-    "@storybook/addon-viewport": "5.1.9",
-    "@storybook/react": "5.1.9",
+    "@storybook/addon-actions": "5.1.11",
+    "@storybook/addon-backgrounds": "5.1.11",
+    "@storybook/addon-info": "5.1.11",
+    "@storybook/addon-knobs": "5.1.11",
+    "@storybook/addon-links": "5.1.11",
+    "@storybook/addon-notes": "5.1.11",
+    "@storybook/addon-viewport": "5.1.11",
+    "@storybook/react": "5.1.11",
     "babel-loader": "8.0.6",
     "storybook-addon-smart-knobs": "4.1.2",
     "storybook-react-router": "1.0.5"

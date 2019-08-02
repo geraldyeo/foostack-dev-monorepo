@@ -47,13 +47,13 @@
     "@types/lodash.get": "4.4.6",
     "@types/lodash.identity": "3.0.6",
     "@types/lodash.isnumber": "3.0.6",
-    "@typescript-eslint/eslint-plugin": "1.13.0",
-    "@typescript-eslint/parser": "1.13.0",
+    "@typescript-eslint/eslint-plugin": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
     "eslint": "6.1.0",
-    "eslint-plugin-jest": "22.13.6",
+    "eslint-plugin-jest": "22.15.1",
     "jest": "24.8.0",
     "prettier": "1.18.2",
-    "rimraf": "2.6.3",
+    "rimraf": "2.7.0",
     "typescript": "3.5.3"
   }
 }

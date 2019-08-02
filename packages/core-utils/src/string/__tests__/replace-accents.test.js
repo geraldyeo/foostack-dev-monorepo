@@ -9,8 +9,8 @@ describe('replaceAccents', () => {
   });
 
   it('should replace all Basic Latin and Latin-1 accented chars with regular ones', () => {
-    var expected = 'aAaAaAaAaAaAcCeEeEeEeEiIiIiIiInNoOoOoOOoOoODpuUuUuUuUyYy';
-    var value = replaceAccents('áÁâÂàÀåÅãÃäÄçÇéÉêÊèÈëËíÍîÎìÌïÏñÑóÓôÔòÒØõÕöÖÐþúÚûÛùÙüÜýÝÿ');
+    const expected = 'aAaAaAaAaAaAcCeEeEeEeEiIiIiIiInNoOoOoOOoOoODpuUuUuUuUyYy';
+    const value = replaceAccents('áÁâÂàÀåÅãÃäÄçÇéÉêÊèÈëËíÍîÎìÌïÏñÑóÓôÔòÒØõÕöÖÐþúÚûÛùÙüÜýÝÿ');
     expect(value).toEqual(expected);
   });
 });

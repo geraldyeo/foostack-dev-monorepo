@@ -88,7 +88,7 @@ export class DesignSystem<T extends DesignTokens> {
     return get(colors, [key, variant]);
   }
 
-  public constructor(token: T, variant: string = 'base') {
+  public constructor(token: T, variant = 'base') {
     invariant(token, 'A design token is needed.');
     this._ds = token;
     this._variant = variant;
