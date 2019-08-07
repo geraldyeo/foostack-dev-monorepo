@@ -83,7 +83,7 @@
     "jest": "24.8.0",
     "lerna": "3.16.4",
     "lint-staged": "9.2.1",
-    "pectin": "3.5.1",
+    "pectin": "3.5.2",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
     "wait-on": "3.3.0"
