@@ -3623,10 +3623,10 @@
   dependencies:
     object-assign "^4.1.1"
 
-"@styled-system/css@5.0.17":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@styled-system/css/-/css-5.0.17.tgz#aaab722fe2f30d44b32909725f426a491e79d88d"
-  integrity sha512-MSKnFq3zK53fJ/Au2oAnioNiKZJ2GATi4/tGYlh+/qSbDa09YX0siOzO8kIMKYt4L2fNCZnCuKPXJS7NFcWbmA==
+"@styled-system/css@5.0.21":
+  version "5.0.21"
+  resolved "https://registry.yarnpkg.com/@styled-system/css/-/css-5.0.21.tgz#8d53fada44c07e6ccf66fd8a6a02d9306cf58d7a"
+  integrity sha512-h0QU3ZWyPjx92wsqGSPmqwiPLizFgmr1lsPMWpfxSjvrbi/XIEdC2+KFr3MaPpLMbWfRB7Mpn6EZ+T7XoaRlOw==
 
 "@styled-system/flexbox@^5.0.18":
   version "5.0.18"
