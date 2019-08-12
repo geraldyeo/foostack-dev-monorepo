@@ -3099,34 +3099,35 @@
     universal-user-agent "^3.0.0"
     url-template "^2.0.8"
 
-"@pectin/api@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@pectin/api/-/api-4.0.1.tgz#7ebf65fc74789039692b055a5e1cf5450e752fe0"
-  integrity sha512-/R3h15wBLuiBxC7IyMBgGpfPs/QNa0OfliD0qgUX3c8qkIoKSiH3ed85T1jGBYOJSLKyF3wcbrQiScBCyTHJyQ==
+"@pectin/api@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@pectin/api/-/api-4.0.2.tgz#65715a4b049949439787bf84ff5589d3c9f5bb87"
+  integrity sha512-BhSzrFo3bc5KD3AngAmOKvzg4Mq6S2td+CKWK/5yfygbn1Rbbo3bYI/fVR41AwH+bG0ARvJFABWtC0W8kk2hpA==
   dependencies:
     "@lerna/batch-packages" "^3.0.0"
     "@lerna/project" "^3.0.0"
-    "@pectin/core" "^4.0.1"
+    "@pectin/core" "^4.0.2"
     dot-prop "^5.1.0"
     globby "^10.0.1"
     p-map "^3.0.0"
 
-"@pectin/babelrc@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@pectin/babelrc/-/babelrc-3.3.1.tgz#5320e9843c3b49e392f391ec186c28cc14d3f158"
-  integrity sha512-rGTtljHdkA6noI1GjzBRXeQxnSbqFTnro2dvMRgZ37Ni3X2UqUjUN8hT8b0ahWJEAB6lKGf+o1ypogH/NmWY5Q==
+"@pectin/babelrc@^3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@pectin/babelrc/-/babelrc-3.3.2.tgz#68cb270b8ac1007d426712d6eb2ef59908ea64f2"
+  integrity sha512-WCV0xxoY2B7bYIxjTBGJLh3APoSjsiHdWybHVLNPZq+/ZVJFQ1742K0P16k9U1VLJQzix5pCAxPF7U6Q540TvA==
   dependencies:
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-transform-runtime" "^7.2.0"
+    clone-deep "^4.0.1"
     cosmiconfig "^5.2.0"
 
-"@pectin/core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@pectin/core/-/core-4.0.1.tgz#aca2513c3bd2be27da1cf60034c5f8964774afe1"
-  integrity sha512-lFjAkkZFwOfuI7gBevFgfqko2ISwiYFAxLatAzwP+lB9jH4HStKWkF9iOgU39pVXvDnnQEANK0viQVmelFmyVg==
+"@pectin/core@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@pectin/core/-/core-4.0.2.tgz#4e43ccc656dfd06aa9ccba63884da94b2df3773f"
+  integrity sha512-iFnhdMnxMLktzEMzMs75c5X5G7YIrXnUKcRm86mB4QfbGBE00X6fDJLCjh3/IUCRqla/esEnuim2cEmiuz+3Ew==
   dependencies:
     "@babel/core" "^7.0.0"
-    "@pectin/babelrc" "^3.3.1"
+    "@pectin/babelrc" "^3.3.2"
     babel-core "^7.0.0-bridge.0"
     camelcase "^5.0.0"
     dot-prop "^5.1.0"
@@ -6517,6 +6518,15 @@ clone-deep@^0.2.4:
     kind-of "^3.0.2"
     lazy-cache "^1.0.3"
     shallow-clone "^0.1.2"
+
+clone-deep@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/clone-deep/-/clone-deep-4.0.1.tgz#c19fd9bdbbf85942b4fd979c84dcf7d5f07c2387"
+  integrity sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==
+  dependencies:
+    is-plain-object "^2.0.4"
+    kind-of "^6.0.2"
+    shallow-clone "^3.0.0"
 
 clone-response@1.0.2:
   version "1.0.2"
@@ -15158,12 +15168,12 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-pectin@3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/pectin/-/pectin-3.5.1.tgz#00ede06d0fa8d2f6a3ddddd09bf9569eebe8071f"
-  integrity sha512-+37FRc/uEnSBDHmbBaKzDrugxyjDoC9rELTW++TiBvxDrcduiDbLb9Zn40swMPd/2jXTSvCHagxaLoBLMmc1wg==
+pectin@3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/pectin/-/pectin-3.5.3.tgz#73ded34e02377c72ec006058330a0d548fe1eceb"
+  integrity sha512-iTpU4J2it+W3AdmPGNNfS+Wmp0HA/D87WfvTrEsVhYvmN1Jbukw2C+p27Xr9gcp+L9ezA6lQT7WZsyrWV7rM5A==
   dependencies:
-    "@pectin/api" "^4.0.1"
+    "@pectin/api" "^4.0.2"
     npmlog "^4.1.2"
     resolve-from "^5.0.0"
     rollup "^1.12.0"
@@ -17622,6 +17632,13 @@ shallow-clone@^0.1.2:
     kind-of "^2.0.1"
     lazy-cache "^0.2.3"
     mixin-object "^2.0.1"
+
+shallow-clone@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/shallow-clone/-/shallow-clone-3.0.1.tgz#8f2981ad92531f55035b01fb230769a40e02efa3"
+  integrity sha512-/6KqX+GVUdqPuPPd2LxDDxzX6CAbjJehAAOKlNpqqUpAqPM6HeL8f+o3a+JsyGjn2lv0WY8UsTgUJjU9Ok55NA==
+  dependencies:
+    kind-of "^6.0.2"
 
 shallow-compare@^1.2.2:
   version "1.2.2"
