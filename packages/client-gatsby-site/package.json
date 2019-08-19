@@ -28,7 +28,7 @@
     "@foostack-dev/core-uikit": "0.0.0",
     "@styled-system/css": "5.0.23",
     "@styled-system/prop-types": "5.1.0",
-    "dotenv": "8.0.0",
+    "dotenv": "8.1.0",
     "gatsby": "2.13.62",
     "gatsby-image": "2.2.8",
     "gatsby-plugin-manifest": "2.2.5",
