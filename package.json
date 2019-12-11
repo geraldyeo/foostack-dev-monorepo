@@ -74,7 +74,7 @@
     "babel-plugin-dev-expression": "0.2.2",
     "babel-plugin-macros": "2.6.1",
     "codacy-coverage": "3.4.0",
-    "concurrently": "4.1.1",
+    "concurrently": "5.0.1",
     "cross-env": "5.2.0",
     "eslint": "6.1.0",
     "eslint-config-prettier": "6.0.0",
