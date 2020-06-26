@@ -70,7 +70,7 @@
     "@testing-library/jest-dom": "4.0.0",
     "@testing-library/react": "9.1.1",
     "babel-eslint": "10.0.2",
-    "babel-jest": "24.8.0",
+    "babel-jest": "26.1.0",
     "babel-plugin-dev-expression": "0.2.2",
     "babel-plugin-macros": "2.6.1",
     "codacy-coverage": "3.4.0",
