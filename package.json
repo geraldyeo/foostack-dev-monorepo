@@ -80,7 +80,7 @@
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-prettier": "3.1.0",
     "husky": "3.0.3",
-    "jest": "24.8.0",
+    "jest": "26.2.1",
     "lerna": "3.16.4",
     "lint-staged": "9.2.1",
     "pectin": "3.5.3",
